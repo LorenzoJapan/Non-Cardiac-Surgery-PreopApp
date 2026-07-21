@@ -1,0 +1,20 @@
+Copyright (c) 2024 the Preop Clearance author(s). All rights reserved.
+
+This software and its source code (the "Software") are made available for
+personal review and evaluation only. Permission is NOT granted to use, copy,
+modify, distribute, sublicense, host for third parties, or deploy the Software
+for clinical use without the prior written permission of the copyright holder.
+
+MEDICAL DISCLAIMER
+
+The Software is clinical DECISION SUPPORT provided for informational and
+educational purposes. It is NOT a validated or regulatory-cleared medical
+device, has not been prospectively validated in patients, and MUST NOT be used
+as the sole basis for any clinical decision. It does not replace the independent
+judgment of a qualified clinician who remains solely responsible for patient
+care. The copyright holder makes no warranty, express or implied, including of
+merchantability or fitness for a particular purpose, and accepts no liability
+for any harm, loss, or damage arising from use of the Software.
+
+If you wish to release this project under an open-source license (e.g., MIT or
+Apache-2.0) instead, replace the text of this file with that license.

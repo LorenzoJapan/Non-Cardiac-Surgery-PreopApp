@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+<title>Preop Clearance</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Preop Clearance">
+<meta name="theme-color" content="#16323C">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Crect width='180' height='180' fill='%2316323C'/%3E%3Ctext x='50%25' y='50%25' dy='.02em' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='104' font-weight='700' fill='%232FB6AE' text-anchor='middle' dominant-baseline='central'%3EPc%3C/text%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='64' height='64' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2316323C'/%3E%3Ctext x='50%25' y='50%25' font-family='-apple-system,Helvetica,Arial,sans-serif' font-size='36' font-weight='700' fill='%232FB6AE' text-anchor='middle' dominant-baseline='central'%3EPc%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --navy:#16323C; --navy-d:#0F242C; --teal:#0E6B69; --teal-l:#12807D;
+    --bg:#F4F7F7; --card:#FFFFFF; --ink:#16262D; --muted:#4C5E66; --line:#E4EAEA; --line2:#EFF3F3;
+    --wash:#E9F3F1; --wash2:#F0F6F5;
+    --cor1:#2E7D32; --cor1bg:#E8F3E9; --cor2a:#8F540B; --cor2abg:#FBF1DE;
+    --cor2b:#C05410; --cor2bbg:#FBEBDD; --cor3:#B23029; --cor3bg:#FBE8E8;
+    --disc-bg:#FFF7E6; --disc-ink:#7a5c12;
+  }
+  .phone.dark{
+    --bg:#0E1720; --card:#17222C; --ink:#E8EEF2; --muted:#9AAEB8; --line:#293641; --line2:#212C36;
+    --wash:#15272A; --wash2:#182A2C; --teal:#48B1AC; --teal-l:#57BFBA;
+    --cor1bg:#16301E; --cor2abg:#332711; --cor2bbg:#341F12; --cor3bg:#361B1B;
+    --disc-bg:#241E10; --disc-ink:#D8B662;
+  }
+  .phone.big .rtitle{font-size:19px}
+  .phone.big .seg button{font-size:17px}
+  .phone.big .seg button .tl{font-size:13px}
+  .phone.big .result h2{font-size:21px}
+  .phone.big .result p{font-size:15px}
+  .phone.big .qchk .lbl{font-size:15px}
+  .phone.big .summary .stitle,.phone.big .summary .sans{font-size:14px}
+  .phone.big .ov-title{font-size:16px}
+  .hbtn{background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:9px;width:36px;height:34px;
+    font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;justify-content:center}
+  .hbtn:active{background:rgba(255,255,255,.22)}
+  .hbtn.on{background:var(--teal)}
+  *{box-sizing:border-box;-webkit-tap-highlight-color:transparent;margin:0}
+  html,body{height:100%;overflow:hidden}
+  body{background:radial-gradient(130% 100% at 50% 0%,#E7EDED 0%,#D6E0E0 70%,#CBD6D6 100%);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    color:var(--ink);display:flex;align-items:center;justify-content:center;min-height:100vh;padding:16px}
+  .mono,.calclast{}
+  :root{--mono2:"SF Mono",ui-monospace,"Roboto Mono",Menlo,Consolas,monospace;}
+  .mono{font-family:var(--mono2);font-variant-numeric:tabular-nums}
+
+  /* iPhone 17 Pro: 402 x 874 CSS pt */
+  .phone{width:402px;height:874px;background:var(--bg);border-radius:46px;flex:none;
+    box-shadow:0 30px 70px rgba(16,38,45,.30),0 0 0 11px #0C1417,0 0 0 13px #223033;
+    overflow:hidden;position:relative;display:flex;flex-direction:column;transform-origin:center center;
+    font-variant-numeric:tabular-nums}
+  .dyn{position:absolute;top:11px;left:50%;transform:translateX(-50%);width:124px;height:33px;background:#0C1417;border-radius:20px;z-index:30}
+  .statusbar{height:50px;display:flex;align-items:flex-end;justify-content:space-between;padding:0 30px 9px;
+    font-size:15px;font-weight:600;color:#fff;background:var(--navy);flex:none}
+  .statusbar .dots{display:flex;gap:6px;align-items:center}
+
+  header.appbar{background:var(--navy);color:#fff;padding:8px 18px 12px;flex:none;display:flex;align-items:center;gap:11px}
+  .appbar .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(140deg,var(--teal-l),var(--teal));
+    display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#fff;flex:none}
+  .appbar h1{font-size:19px;letter-spacing:-.02em;font-weight:700;line-height:1}
+  .appbar .sub{font-size:12px;color:#A9C0D2;margin-top:2px}
+  .appbar .reset{margin-left:auto;background:rgba(255,255,255,.12);color:#fff;border:none;border-radius:9px;
+    padding:8px 13px;font-size:13px;font-weight:600;font-family:inherit;cursor:pointer}
+  .appbar .reset:active{background:rgba(255,255,255,.22)}
+
+  .stage{flex:1;overflow:hidden;padding:12px 16px 0;display:flex;flex-direction:column}
+  .view{display:none;flex:1;min-height:0;flex-direction:column}
+  .view.active{display:flex}
+  #v-calc,#v-ref{overflow-y:auto;padding-bottom:14px}
+
+  /* live recommendation banner */
+  .result{border-radius:15px;padding:12px 15px;color:#fff;flex:none;margin-bottom:6px;transition:background .25s}
+  .result.pending{background:linear-gradient(135deg,#42586d,#33475a)}
+  .result.cor1{background:linear-gradient(135deg,#2E7D32,#256a29)}
+  .result.cor2a{background:linear-gradient(135deg,#B8720A,#9c6108)}
+  .result.cor2b{background:linear-gradient(135deg,#C85E12,#a94e0f)}
+  .result.cor3{background:linear-gradient(135deg,#C62828,#a51f1f)}
+  .result .rtop{display:flex;align-items:center;gap:8px;min-height:22px}
+  .result .badge{background:rgba(255,255,255,.22);padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.03em}
+  .result .rprompt{font-size:15px;color:rgba(255,255,255,.9);font-weight:600}
+  .result h2{font-size:19px;margin:0 0 3px;letter-spacing:-.02em;line-height:1.2;font-weight:700}
+  .result p{font-size:13.5px;line-height:1.4;color:rgba(255,255,255,.94)}
+  .result .note{font-size:12.5px;color:rgba(255,255,255,.85);margin-top:6px;line-height:1.35}
+  .ract-row{display:flex;gap:8px;margin-top:12px;justify-content:center}
+  .ract{flex:1;background:rgba(255,255,255,.2);color:#fff;border:none;border-radius:10px;padding:11px;font-size:13px;font-weight:700;font-family:inherit;cursor:pointer;display:inline-flex;align-items:center;justify-content:center;gap:6px}
+  .ract.solo{flex:0 1 auto;padding-left:26px;padding-right:26px}
+  .ract:active{background:rgba(255,255,255,.34)}
+  .calcrow2{display:flex;gap:12px;align-items:center}
+  .calcmeta{flex:1;min-width:0}
+  .calcwhen{font-size:12.5px;color:var(--muted);line-height:1.3}
+  .calclast{font-size:12px;font-weight:700;color:var(--teal);margin-top:3px;font-family:var(--mono2);letter-spacing:-.01em}
+
+  /* decision rows */
+  .rows{flex:1;display:flex;flex-direction:column;gap:9px;min-height:0;overflow:hidden;justify-content:flex-start}
+  .row{display:flex;flex-direction:column;flex:none}
+  .row.active{animation:qfade .32s ease}
+  @keyframes qfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+  .rhint{font-size:12px;color:var(--muted);margin:1px 0 8px 32px;line-height:1.35}
+  .summaries{display:flex;flex-direction:column;gap:9px;flex:none}
+  .activewrap{flex:1;display:flex;flex-direction:column;justify-content:center;min-height:0;margin-top:9px}
+  .activewrap:empty{margin-top:0}
+  .progress{display:none;align-items:center;gap:6px;margin:-4px 0 12px;padding:0 2px}
+  .progress.show{display:flex}
+  .progress .pdot{height:5px;border-radius:3px;background:var(--line);flex:1;transition:background .2s}
+  .progress .pdot.done{background:var(--teal)}
+  .progress .pdot.cur{background:var(--navy)}
+  .progress .plabel{font-size:11px;font-weight:700;color:var(--muted);flex:none;margin-left:4px;white-space:nowrap}
+  .ov-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 4px 8px;margin-bottom:12px}
+  .ov-head{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);padding:11px 13px 4px}
+  .ov-item{display:flex;align-items:center;gap:12px;padding:11px 13px;border-top:1px solid var(--line2)}
+  .ov-num{width:23px;height:23px;border-radius:7px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex:none}
+  .ov-title{font-size:15px;font-weight:600;color:var(--ink)}
+  .ov-begin{width:100%;padding:16px;border:none;border-radius:13px;background:var(--navy);color:#fff;font-size:16px;font-weight:700;font-family:inherit;cursor:pointer}
+  .ov-begin:active{background:var(--navy-d)}
+  .qlist{margin:8px 0 0}
+  .qchk{display:flex;align-items:center;gap:11px;padding:9px 3px;border-bottom:1px solid var(--line2);cursor:pointer}
+  .qchk:last-child{border-bottom:none}
+  .qchk .box{width:23px;height:23px;border-radius:7px;border:2px solid var(--line);flex:none;display:flex;align-items:center;justify-content:center;transition:all .13s}
+  .qchk.on .box{background:var(--teal);border-color:var(--teal)}
+  .qchk .box svg{opacity:0;transition:opacity .13s}.qchk.on .box svg{opacity:1}
+  .qchk .lbl{font-size:14px;font-weight:500;line-height:1.3}
+  .qcontinue{margin-top:12px;width:100%;padding:14px;border:none;border-radius:12px;background:var(--navy);color:#fff;
+    font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:background .15s}
+  .qcontinue:active{background:var(--navy-d)}
+  .qcontinue.warn{background:var(--cor2a)}
+  .summary{display:flex;align-items:center;gap:10px;padding:9px 13px;border-radius:11px;background:var(--card);
+    border:1px solid var(--line);cursor:pointer;transition:background .15s;animation:sfade .3s ease}
+  @keyframes sfade{from{opacity:0}to{opacity:1}}
+  .summary:active{background:var(--bg)}
+  .summary .snum{width:21px;height:21px;border-radius:6px;background:var(--teal);color:#fff;font-size:11px;font-weight:700;
+    display:inline-flex;align-items:center;justify-content:center;flex:none}
+  .summary .stitle{font-size:13px;color:var(--muted);font-weight:600;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .summary .sans{margin-left:auto;font-size:13px;font-weight:700;color:var(--ink);text-align:right;flex:none;padding-left:8px}
+  .summary .sedit{flex:none;color:var(--muted);display:inline-flex;opacity:.7}
+  .row.locked{opacity:.32;pointer-events:none}
+  .row.resolved{opacity:.55}
+  .row.forced .seg{pointer-events:none}
+  .row.calcrow .seg{pointer-events:none}
+  .row.calcrow .seg button{opacity:.9}
+  .rmini.need{background:var(--teal);color:#fff;animation:pulse 1.6s ease-in-out infinite}
+  @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(19,122,127,.35)}50%{box-shadow:0 0 0 5px rgba(19,122,127,0)}}
+  .row.riskrow{flex-grow:1.7}
+  .rlabel{display:flex;align-items:baseline;gap:8px;margin-bottom:5px;flex:none}
+  .rnum{width:22px;height:22px;border-radius:7px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;
+    display:inline-flex;align-items:center;justify-content:center;flex:none;position:relative;top:2px}
+  .row.resolved .rnum{background:var(--teal)}
+  .rtitle{font-size:17px;font-weight:700;color:var(--ink);line-height:1.12}
+  .rmini{margin-left:auto;background:var(--card);border:1.5px solid var(--teal);color:var(--teal);
+    border-radius:9px;padding:7px 13px;font-size:13.5px;font-weight:700;font-family:inherit;cursor:pointer}
+  .rmini:active{background:var(--teal);color:#fff}
+  .rcap{font-size:13px;color:var(--muted);margin:7px 0 0 30px;font-weight:600;flex:none}
+  .rcap b{color:var(--cor2a);font-weight:800}
+
+  .seg{display:flex;gap:8px}
+  .seg button{flex:1;min-height:56px;border:1.5px solid var(--line);background:var(--card);border-radius:12px;
+    font-size:16px;font-weight:600;color:var(--ink);font-family:inherit;cursor:pointer;padding:7px 4px;
+    display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;transition:all .13s;line-height:1.12}
+  .seg button .tl{font-size:12px;font-weight:500;color:var(--muted)}
+  .seg button:active{transform:scale(.97)}
+  .seg button.sel{background:var(--navy);border-color:var(--navy);color:#fff}
+  .seg button.sel .tl{color:rgba(255,255,255,.75)}
+  .seg button.sel.warn{background:var(--cor2a);border-color:var(--cor2a)}
+  .seg button.sel.danger{background:var(--cor3);border-color:var(--cor3)}
+  .seg button.sel.good{background:var(--cor1);border-color:var(--cor1)}
+
+  .foot{flex:none;padding:4px 0 3px}
+  .disc{display:flex;gap:7px;align-items:flex-start}
+  .disc svg{flex:none;margin-top:1px}
+  .disc p{font-size:12px;color:var(--disc-ink);line-height:1.35}
+
+  /* bottom sheet */
+  .sheet-bg{position:absolute;inset:0;background:rgba(15,25,35,.5);opacity:0;pointer-events:none;transition:opacity .25s;z-index:40}
+  .sheet-bg.open{opacity:1;pointer-events:auto}
+  .sheet{position:absolute;left:0;right:0;bottom:0;background:var(--card);border-radius:22px 22px 0 0;
+    transform:translateY(100%);transition:transform .28s cubic-bezier(.3,.7,.3,1);z-index:41;
+    max-height:94%;display:flex;flex-direction:column;padding:8px 18px 22px}
+  .sheet.open{transform:translateY(0)}
+  .grab{width:38px;height:5px;border-radius:3px;background:#D3DBE2;margin:6px auto 10px;flex:none}
+  .sheet-head{display:flex;align-items:center;margin-bottom:6px;flex:none}
+  .sheet-head h3{font-size:17px;font-weight:700}
+  .sheet-head .x{margin-left:auto;background:var(--bg);border:none;width:30px;height:30px;border-radius:15px;
+    font-size:17px;color:var(--muted);cursor:pointer}
+  .sheet .lead{font-size:12.5px;color:var(--muted);line-height:1.4;margin-bottom:8px;flex:none}
+  .chklist{overflow-y:auto;flex:1;min-height:0}
+  .chk{display:flex;align-items:center;gap:11px;padding:8px 2px;border-bottom:1px solid var(--line2);cursor:pointer}
+  .chk:last-child{border-bottom:none}
+  .box{width:24px;height:24px;border-radius:7px;border:2px solid var(--line);flex:none;display:flex;align-items:center;justify-content:center;transition:all .13s}
+  .chk.on .box{background:var(--teal);border-color:var(--teal)}
+  .box svg{opacity:0;transition:opacity .13s}.chk.on .box svg{opacity:1}
+  .chk .lbl{font-size:13px;line-height:1.3;font-weight:500}
+  .chk .wt{margin-left:auto;font-size:12px;color:var(--muted);flex:none;padding-left:8px}
+  .sheet-foot{flex:none;display:flex;align-items:center;gap:12px;padding-top:12px;border-top:1px solid var(--line);margin-top:6px}
+  .sheet-foot .num{font-size:26px;font-weight:800;letter-spacing:-.02em}
+  .sheet-foot .lab{font-size:10.5px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+  .flag{padding:6px 13px;border-radius:20px;font-size:13px;font-weight:800}
+  .flag.low,.flag.adeq{background:var(--cor1bg);color:var(--cor1)}
+  .flag.high{background:var(--cor3bg);color:var(--cor3)}
+  .flag.poor{background:var(--cor2abg);color:var(--cor2a)}
+  .apply{margin-left:auto;background:var(--teal);color:#fff;border:none;border-radius:11px;padding:12px 18px;font-size:14px;font-weight:700;font-family:inherit;cursor:pointer}
+
+  /* calc + ref tabs */
+  .field{margin-bottom:13px}
+  .field label{display:block;font-size:12px;font-weight:700;color:var(--muted);margin-bottom:5px;text-transform:uppercase;letter-spacing:.04em}
+  .field input{width:100%;padding:12px 13px;border:1.5px solid var(--line);border-radius:11px;font-size:16px;font-family:inherit;color:var(--ink)}
+  .field input:focus{outline:none;border-color:var(--teal)}
+  .field .unit{font-size:11px;color:var(--muted);margin-top:4px}
+  .bio-res{padding:10px 13px;border-radius:10px;margin-top:7px;font-size:12.5px;font-weight:600}
+  .bio-res.hi{background:var(--cor3bg);color:var(--cor3)}.bio-res.ok{background:var(--cor1bg);color:var(--cor1)}.bio-res.na{background:var(--bg);color:var(--muted)}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:12px}
+  .card h2{font-size:16px;margin-bottom:4px}.card .eyebrow{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal)}
+  .card p.lead{color:var(--muted);font-size:12.5px;line-height:1.45;margin-top:4px}
+  .eyebrow2{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--teal);margin:4px 0 9px}
+  .medrow{display:flex;gap:9px;align-items:center;padding:10px 0;border-bottom:1px solid var(--line2);font-size:13px}
+  .medrow:last-child{border-bottom:none}.medrow .drug{font-weight:700;flex:1.1}.medrow .act{flex:.9}
+  .medrow .pill{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:6px}
+  .pill.hold{background:var(--cor2abg);color:var(--cor2a)}.pill.cont{background:var(--cor1bg);color:var(--cor1)}.pill.indv{background:#EAEFF3;color:var(--muted)}
+  .medrow .tm{flex:1.1;font-size:11.5px;color:var(--muted)}
+  .refcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:10px}
+  .refcard .rt{display:flex;align-items:center;gap:8px;margin-bottom:5px}.refcard h3{font-size:14px}
+  .refcard .badge2{margin-left:auto;font-size:10px;color:var(--muted)}.refcard p{font-size:12px;color:var(--muted);line-height:1.45}
+
+  .tabbar{height:70px;background:var(--card);backdrop-filter:blur(20px);border-top:1px solid var(--line);
+    display:flex;padding:8px 0 16px;flex:none}
+  .tab{flex:1;display:flex;flex-direction:column;align-items:center;gap:3px;background:none;border:none;cursor:pointer;color:var(--muted);font-family:inherit}
+  .tab.active{color:var(--navy)}.tab .tl{font-size:10px;font-weight:600}.tab svg{width:23px;height:23px}
+  .homebar{position:absolute;bottom:8px;left:50%;transform:translateX(-50%);width:135px;height:5px;border-radius:3px;background:#0B1520;opacity:.26;z-index:35}
+</style>
+</head>
+<body>
+<div class="phone">
+  <div class="dyn"></div>
+  <div class="statusbar"><span class="mono">9:41</span>
+    <span class="dots">
+      <svg width="18" height="12" viewBox="0 0 18 12" fill="#fff"><rect x="0" y="7" width="3" height="5" rx="1"/><rect x="5" y="4" width="3" height="8" rx="1"/><rect x="10" y="1" width="3" height="11" rx="1"/><rect x="15" y="1" width="3" height="11" rx="1" opacity=".4"/></svg>
+      <svg width="24" height="12" viewBox="0 0 24 12" fill="none"><rect x="1" y="1" width="19" height="10" rx="3" stroke="#fff" stroke-opacity=".5"/><rect x="2.5" y="2.5" width="14" height="7" rx="1.5" fill="#fff"/><rect x="21" y="4" width="2" height="4" rx="1" fill="#fff"/></svg>
+    </span></div>
+
+  <header class="appbar">
+    <div class="mark">P<span style="font-size:10px">c</span></div>
+    <div><h1>Preop Clearance</h1><div class="sub" id="appsub">Preop clearance for non-cardiac surgery</div></div>
+    <div style="margin-left:auto;display:flex;gap:6px;align-items:center">
+      <button class="hbtn" id="darkBtn" onclick="toggleDark()" aria-label="Toggle dark mode" title="Dark mode">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 12.8A9 9 0 1111.2 3 7 7 0 0021 12.8z"/></svg></button>
+      <button class="hbtn" id="bigBtn" onclick="toggleBig()" aria-label="Toggle larger text" title="Larger text">A<span style="font-size:16px">A</span></button>
+      <button class="reset" onclick="resetAll()">Reset</button>
+    </div>
+  </header>
+
+  <div class="stage">
+    <section id="v-assess" class="view active">
+      <div class="result pending" id="result">
+        <div class="rtop"><span class="rprompt" id="rprompt">Answer the highlighted step to see guidance</span></div>
+        <h2 id="rtitle" style="display:none"></h2>
+        <p id="rtext" style="display:none"></p>
+        <div class="note" id="rnote" style="display:none"></div>
+        <div class="ract-row" id="ractions" style="display:none"></div>
+      </div>
+      <div class="progress" id="progress"></div>
+      <div class="rows" id="rows"></div>
+      <div class="foot"><div class="disc">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C79A2E" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 001.7 3h16.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
+        <p><b>Decision support, not a directive</b> — not validated; does not replace clinical judgment. 2024 AHA/ACC.</p>
+      </div></div>
+    </section>
+
+    <section id="v-calc" class="view"></section>
+    <section id="v-ref" class="view"></section>
+  </div>
+
+  <nav class="tabbar">
+    <button class="tab active" data-tab="assess" onclick="go('assess')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 11l3 3 8-8"/><path d="M21 12v6a2 2 0 01-2 2H5a2 2 0 01-2-2V6a2 2 0 012-2h11"/></svg><span class="tl">Assess</span></button>
+    <button class="tab" data-tab="calc" onclick="go('calc')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/></svg><span class="tl">Calculators</span></button>
+    <button class="tab" data-tab="ref" onclick="go('ref')">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-1a3 3 0 00-3 3v13"/></svg><span class="tl">Reference</span></button>
+  </nav>
+  <div class="homebar"></div>
+
+  <!-- bottom sheet -->
+  <div class="sheet-bg" id="sheetbg" onclick="closeSheet()"></div>
+  <div class="sheet" id="sheet">
+    <div class="grab"></div>
+    <div class="sheet-head"><h3 id="sheet-title"></h3><button class="x" onclick="closeSheet()">✕</button></div>
+    <p class="lead" id="sheet-lead"></p>
+    <div class="chklist" id="sheet-list"></div>
+    <div class="sheet-foot" id="sheet-foot"></div>
+  </div>
+</div>
+
+<script>
+/* ---- clinical data (from PreopCardiac_App_v1 spec) ---- */
+const RCRI=[{t:"High-risk surgery (intraperitoneal, intrathoracic, suprainguinal vascular)"},{t:"History of ischemic heart disease"},{t:"History of congestive heart failure"},{t:"History of cerebrovascular disease (stroke/TIA)"},{t:"Insulin therapy for diabetes"},{t:"Preoperative serum creatinine > 2.0 mg/dL"}];
+const FRAIL=[{t:"Fatigue — tired most or all of the time"},{t:"Resistance — difficulty climbing a flight of stairs"},{t:"Ambulation — difficulty walking one block"},{t:"Illnesses — more than 5 chronic illnesses"},{t:"Loss of weight — unintentional ≥ 5% in the past year"}];
+const DASI=[{t:"Eat, dress, bathe, use toilet?",w:2.75},{t:"Walk indoors around the house?",w:1.75},{t:"Walk 1–2 blocks on level ground?",w:2.75},{t:"Climb a flight of stairs / up a hill?",w:5.50},{t:"Run a short distance?",w:8.00},{t:"Light housework (dusting, dishes)?",w:2.70},{t:"Moderate work (vacuum, groceries)?",w:3.50},{t:"Heavy work (scrub floors, lift)?",w:8.00},{t:"Yardwork (rake, weed, mow)?",w:4.50},{t:"Have sexual relations?",w:5.25},{t:"Moderate recreation (golf, dancing)?",w:6.00},{t:"Strenuous sports (swim, tennis, ski)?",w:7.50}];
+const ACUTE_LIST=["Acute coronary syndrome (ACS)","Acute decompensated heart failure","Significant / uncontrolled arrhythmia","Severe symptomatic valve disease (e.g. AS)"];
+const MODIFIER_LIST=["Severe valvular heart disease (VHD)","Severe pulmonary hypertension","Elevated-risk congenital heart disease (CHD)","Prior cardiac stents / CABG","Recent stroke","CIED (pacemaker / ICD present)","Frailty"];
+const RESULTS={
+  EMERGENT:{cor:"1",sec:"§1.5",t:"Proceed with surveillance",p:"Emergency/urgent — proceed to surgery with perioperative monitoring and medical optimization. Limited time for extended workup.",corEnd:true},
+  ACS_DEFER:{cor:"1",sec:"§6.1.1",t:"Hold on surgery",p:"Manage the acute cardiac condition and defer elective surgery until stabilized/treated/revascularized and improved.",corEnd:true},
+  LOW:{cor:"1",sec:"Fig 1",t:"Proceed — no testing",p:"Predicted MACE < 1%. Proceed to surgery; no further cardiac testing indicated.",corEnd:true},
+  ADEQ:{cor:"2a",sec:"§3.2",t:"Proceed with optimization",p:"≥ 4 METs (DASI > 34). Proceed with medical optimization; obtain a baseline ECG and continue GDMT. Further testing generally not needed.",corEnd:true},
+  BIOMARKER_OK:{cor:"2a",sec:"§3.4",t:"Normal biomarkers — proceed",p:"Normal BNP/NT-proBNP supports proceeding with medical optimization and postoperative troponin on days 1-3.",corEnd:true},
+  OPTIMIZE:{cor:"1",sec:"§7 / §9.1",t:"Optimize & proceed",p:"Since further testing would not change management, proceed with medical optimization + postoperative troponin surveillance days 1-3.",corEnd:true},
+  TEST:{cor:"2b",sec:"§4.3",t:"Selective testing",p:"Proceed with cardiac evaluation (TTE, CCTA)/stress testing only if results will change management (e.g. severe CAD with LM/multivessel disease → revascularization).",corEnd:true},
+};
+const MEDS=[["Statins","Continue","cont"],["Beta blockers","Continue","cont"],["SGLT2 inhibitors","Hold 3–4 d","hold"],["ACEi/ARB","Individualize","indv"],["Troponin surveil.","If elevated risk","cont"]];
+const REFMEDS=[["Statins","Continue","cont","Perioperative period"],["ACEi / ARB","Individualize","indv","Consider hold AM of surgery"],["Beta blockers","Continue","cont","Don't start acutely"],["SGLT2 inhibitors","Hold","hold","3–4 days before"],["DAPT / stents","Individualize","indv","~6 mo after DES"],["Anticoagulants","Individualize","indv","Bridge only highest risk"]];
+const COMORB=[["Coronary artery disease","§6.1","Optimize ASCVD therapy. ACS defers surgery; routine revascularization not indicated for non–left-main disease."],["Hypertension / BP","§6.2","Optimize poorly controlled HTN before elevated-risk surgery. Don't cancel for mild–moderate elevation alone. If ≥ 180/110 mm Hg + elevated-risk surgery + RCRI factors → consider deferral to optimize BP. If < 180/110 mm Hg and no RCRI factors → hypertension alone is generally not a reason to cancel."],["Heart failure","§6.3","Assess volume status & LV function. Hold SGLT2i 3–4 d pre-op; continue GDMT where appropriate."],["Valvular disease","§6.4","Severe symptomatic disease may warrant intervention before elevated-risk elective surgery."],["Atrial fibrillation","§6.5","Rate/rhythm & anticoagulation planning. New perioperative AF needs close follow-up."],["CIED (PPM/ICD)","§6.6","Device plan: interrogation & reprogramming per procedure and EMI risk."],["Prior stroke / TIA","§6.7","Delay elective surgery ≥ 3 months after recent stroke where feasible."],["Obstructive sleep apnea","§6.8","Screen and plan perioperative airway/monitoring; continue PAP therapy."]];
+const CHECK='<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.6"><path d="M2 7.5l3 3 7-7"/></svg>';
+const PENCIL='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>';
+const COPY='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>';
+const BOOK='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 013 3v13H7a3 3 0 01-3-3z"/><path d="M18 4h2v14"/></svg>';
+const CHECK2='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>';
+
+/* ---- state ---- */
+let ans={urgency:null,acute:null,modifiers:null,risk:null,func:null,biomarkers:null,test:null};
+let rcriResult=null, dasiResult=null;
+let acuteS=Array(ACUTE_LIST.length).fill(false), modS=Array(MODIFIER_LIST.length).fill(false);
+function rcriMace(n){ return n<=0?'3.9':n===1?'6.0':n===2?'10.1':'15'; }
+
+const ROWS=[
+  {key:"urgency",n:1,title:"Surgical urgency?",opts:[
+    {l:"Emergency",tl:"<2h",cls:"danger",term:"EMERGENT"},
+    {l:"Urgent",tl:"2–24h",cls:"warn",term:"EMERGENT"},
+    {l:"Time-sens",tl:"≤3mo"},{l:"Elective",tl:"planned"}]},
+  {key:"acute",n:2,title:"Acute cardiac condition?",hint:"ACS · decompensated HF · significant arrhythmia · severe valve disease",opts:[
+    {l:"Present",cls:"danger",term:"ACS_DEFER"},{l:"None"}]},
+  {key:"modifiers",n:3,title:"Risk modifiers present?",hint:"Valvular · pulm HTN · HCM · CIED · arrhythmia · stroke · OSA",opts:[
+    {l:"Present",cls:"warn"},{l:"None"}]},
+  {key:"risk",n:4,title:"Risk of MACE?",mini:"RCRI",opts:[
+    {l:"Elevated",tl:"≥1% / RCRI>1",cls:"warn"},{l:"Low",tl:"<1%",cls:"good",term:"LOW"}]},
+  {key:"func",n:5,title:"Functional capacity?",mini:"DASI",hint:"Check 12-lead ECG, consider TTE, optimize CV risk with GDMT if appropriate, discuss with team timing and testing value — then assess functional capacity",opts:[
+    {l:"Adequate",tl:"≥4 METs",cls:"good",term:"ADEQ"},{l:"Poor",tl:"<4 METs",cls:"warn"}]},
+  {key:"biomarkers",n:6,title:"Biomarkers (BNP / NT-proBNP)?",hint:"BNP >92 · NT-proBNP ≥300 · troponin >URL",opts:[
+    {l:"Normal",cls:"good",term:"BIOMARKER_OK"},{l:"Elevated",cls:"warn"}]},
+  {key:"test",n:7,title:"Would cardiac testing change plan?",opts:[
+    {l:"No",tl:"proceed",term:"OPTIMIZE"},{l:"Yes",tl:"test",cls:"warn",term:"TEST"}]},
+];
+const ROW_BY=Object.fromEntries(ROWS.map(r=>[r.key,r]));
+
+/* which rows are active given branch logic; returns {activeIdx, terminal} */
+function evalFlow(){
+  const order=["urgency","acute","modifiers","risk","func","biomarkers","test"];
+  for(let i=0;i<order.length;i++){
+    const k=order[i]; const v=ans[k];
+    if(v===null) return {activeIdx:i,terminal:null};
+    const opt=ROW_BY[k].opts[v];
+    if(opt.term){ return {activeIdx:i,terminal:opt.term}; }
+  }
+  return {activeIdx:order.length,terminal:null};
+}
+
+function answerSummary(r){
+  const v=ans[r.key];
+  if(r.key==='acute'||r.key==='modifiers'){
+    const st=r.key==='acute'?acuteS:modS; const n=st.filter(Boolean).length;
+    return n>0 ? `Present · ${n}` : 'None';
+  }
+  const o=r.opts[v]; let extra='';
+  if(r.key==='risk' && v===0){
+    if(ans.modifiers===0 && rcriResult && rcriResult.score===0) extra=' · ≥1% (mod)';
+    else if(ans.modifiers===0 && !rcriResult) extra=' · modifier';
+    else if(rcriResult) extra=` · RCRI ${rcriResult.score}, ~${rcriResult.mace}%`;
+  }
+  return o.l+extra;
+}
+function activeRowHTML(r){
+  const v=ans[r.key];
+  if(r.key==='acute'||r.key==='modifiers'){
+    const list=r.key==='acute'?ACUTE_LIST:MODIFIER_LIST;
+    const st=r.key==='acute'?acuteS:modS;
+    const items=list.map((t,i)=>`<div class="qchk ${st[i]?'on':''}" onclick="togCond('${r.key}',${i})"><div class="box">${CHECK}</div><div class="lbl">${t}</div></div>`).join('');
+    const any=st.some(Boolean);
+    return `<div class="row active">
+      <div class="rlabel"><span class="rnum">${r.n}</span><span class="rtitle">${r.title}</span></div>
+      <div class="qlist">${items}</div>
+      <button class="qcontinue ${any?'warn':''}" onclick="confirmCond('${r.key}')">${any?'Continue — present':'Continue — none present'}</button>
+    </div>`;
+  }
+  const needCalc=r.mini && v===null;
+  const mini=r.mini?`<button class="rmini ${needCalc?'need':''}" onclick="openCalc('${r.mini.toLowerCase()}')">check ${r.mini}</button>`:'';
+  let hintText=r.hint;
+  if(r.key==='func'){
+    hintText="Check 12-lead ECG, consider TTE, optimize CV risk with GDMT if appropriate, "
+      + (ans.modifiers===0 ? "discuss with team timing and further cardiac testing value, then assess functional capacity"
+                           : "then assess functional capacity");
+  }
+  const hint=hintText?`<div class="rhint">${hintText}</div>`:'';
+  const segs=r.opts.map((o,oi)=>{
+    const sel=v===oi?'sel '+(o.cls||''):'';
+    return `<button class="${sel}" onclick="answer('${r.key}',${oi})"><span>${o.l}</span>${o.tl?`<span class="tl">${o.tl}</span>`:''}</button>`;
+  }).join('');
+  return `<div class="row active ${r.key==='risk'?'riskrow':''} ${r.mini?'calcrow':''}">
+    <div class="rlabel"><span class="rnum">${r.n}</span><span class="rtitle">${r.title}</span>${mini}</div>
+    ${hint}<div class="seg">${segs}</div></div>`;
+}
+function togCond(key,i){
+  const st=key==='acute'?acuteS:modS; st[i]=!st[i];
+  const items=document.querySelectorAll('.row.active .qchk');
+  if(items[i]) items[i].classList.toggle('on',st[i]);
+  const any=st.some(Boolean);
+  const btn=document.querySelector('.row.active .qcontinue');
+  if(btn){ btn.textContent=any?'Continue — present':'Continue — none present'; btn.classList.toggle('warn',any); }
+}
+function confirmCond(key){
+  const st=key==='acute'?acuteS:modS;
+  answer(key, st.some(Boolean)?0:1);
+}
+let started=false;
+function toggleDark(){ const p=document.querySelector('.phone'); p.classList.toggle('dark'); document.getElementById('darkBtn').classList.toggle('on',p.classList.contains('dark')); }
+function toggleBig(){ const p=document.querySelector('.phone'); p.classList.toggle('big'); document.getElementById('bigBtn').classList.toggle('on',p.classList.contains('big')); }
+function startAssessment(){ started=true; rcriResult=null; dasiResult=null; renderRows(); }
+function renderProgress(activeIdx, terminal){
+  const el=document.getElementById('progress');
+  if(!started){ el.className='progress'; el.innerHTML=''; return; }
+  el.className='progress show';
+  let dots='';
+  for(let i=0;i<ROWS.length;i++){
+    let cls = terminal ? (i<=activeIdx?'done':'') : (i<activeIdx?'done':(i===activeIdx?'cur':''));
+    dots+=`<div class="pdot ${cls}"></div>`;
+  }
+  el.innerHTML = dots + `<span class="plabel">${terminal?'Result':'Step '+(activeIdx+1)+' of '+ROWS.length}</span>`;
+}
+function renderRows(){
+  if(!started){
+    const items=ROWS.map(r=>`<div class="ov-item"><span class="ov-num">${r.n}</span><span class="ov-title">${r.title}</span></div>`).join('');
+    document.getElementById('rows').innerHTML=
+      `<div class="ov-card"><div class="ov-head">Assessment steps</div>${items}</div>
+       <button class="ov-begin" onclick="startAssessment()">Begin patient assessment →</button>`;
+    renderResult(null); renderProgress(0,null);
+    document.getElementById('rprompt').textContent='Preoperative cardiac clearance · 7 steps';
+    return;
+  }
+  const {activeIdx,terminal}=evalFlow();
+  let sumHtml='', actHtml='';
+  ROWS.forEach((r,ri)=>{
+    const v=ans[r.key];
+    const answered = v!==null && (ri<activeIdx || terminal);
+    const isActive = ri===activeIdx && !terminal;
+    if(answered){
+      sumHtml+=`<div class="summary" onclick="editStep('${r.key}')"><span class="snum">${r.n}</span><span class="stitle">${r.title}</span><span class="sans">${answerSummary(r)}</span><span class="sedit">${PENCIL}</span></div>`;
+    } else if(isActive){
+      actHtml+=activeRowHTML(r);
+    }
+  });
+  document.getElementById('rows').innerHTML=`<div class="summaries">${sumHtml}</div><div class="activewrap">${actHtml}</div>`;
+  renderResult(terminal); renderProgress(activeIdx,terminal);
+}
+function editStep(key){
+  const order=["urgency","acute","modifiers","risk","func","biomarkers","test"];
+  const idx=order.indexOf(key);
+  if(idx<=order.indexOf('risk')) rcriResult=null;
+  for(let i=idx;i<order.length;i++) ans[order[i]]=null;
+  if(key==='risk' && ans.modifiers===0){ ans.risk=0; renderRows(); openCalc('rcri'); return; }
+  renderRows();
+}
+
+function renderResult(term){
+  const el=document.getElementById('result');
+  const rt=id=>document.getElementById(id);
+  const rtop=document.querySelector('#result .rtop');
+  if(!term){
+    el.className='result pending';
+    rtop.style.display=''; rt('rprompt').style.display=''; rt('rtitle').style.display='none'; rt('rtext').style.display='none'; rt('rnote').style.display='none'; rt('ractions').style.display='none';
+    const {activeIdx}=evalFlow();
+    rt('rprompt').textContent = activeIdx===0 ? 'Answer step 1 to begin' : `Continue — answer step ${activeIdx+1}`;
+    return;
+  }
+  const r=RESULTS[term];
+  el.className='result cor'+r.cor.replace(/[^0-9ab]/g,'');
+  rtop.style.display='none';
+  rt('rtitle').style.display=''; rt('rtitle').innerHTML = r.corEnd ? r.t : `<span class="badge" style="margin-right:8px">COR ${r.cor} · ${r.sec}</span>${r.t}`;
+  rt('rtext').style.display=''; rt('rtext').textContent=r.p;
+  const corTag = r.corEnd ? `  ·  <span style="opacity:.8;font-weight:700">COR ${r.cor} · ${r.sec}</span>` : '';
+  if(r.meds){ rt('rnote').style.display=''; rt('rnote').innerHTML='<b>Meds:</b> continue statin + β-blocker · hold SGLT2i 3–4 d · postop troponin if elevated risk'; }
+  else if(r.note){ rt('rnote').style.display=''; rt('rnote').innerHTML=r.note+corTag; }
+  else if(r.corEnd){ rt('rnote').style.display=''; rt('rnote').innerHTML=`<span style="opacity:.8;font-weight:700">COR ${r.cor} · ${r.sec}</span>`; }
+  else rt('rnote').style.display='none';
+  rt('ractions').style.display='';
+  rt('ractions').innerHTML=`
+    <button class="ract solo" id="copyBtn" onclick="copySummary('${term}')">${COPY} Copy Preop Clearance Summary</button>`;
+}
+function buildNote(term){
+  const r=RESULTS[term];
+  const acuteList=ACUTE_LIST.filter((_,i)=>acuteS[i]);
+  const modList=MODIFIER_LIST.filter((_,i)=>modS[i]);
+  const L=[];
+  L.push("PREOPERATIVE CARDIAC CLEARANCE — non-cardiac surgery");
+  L.push("");
+  L.push("• Surgical urgency: "+ROWS[0].opts[ans.urgency].l);
+  if(ans.acute!=null) L.push("• Acute cardiac condition: "+(ans.acute===0?("Present — "+acuteList.join(", ")):"None"));
+  if(ans.modifiers!=null) L.push("• Risk modifiers: "+(ans.modifiers===0?("Present — "+modList.join(", ")):"None"));
+  if(ans.risk!=null){ let s=(ans.risk===0?"Elevated":"Low"); if(rcriResult) s+=` (RCRI ${rcriResult.score}, ~${rcriResult.mace}% MACE)`; else if(ans.modifiers===0) s+=" (risk modifier)"; L.push("• Risk of MACE: "+s); }
+  if(ans.func!=null){ let s=(ans.func===0?"Adequate (≥4 METs)":"Poor (<4 METs)"); if(dasiResult) s=`${ans.func===0?"Adequate":"Poor"} (DASI ${dasiResult.sum.toFixed(1)}, ~${dasiResult.mets.toFixed(1)} METs)`; L.push("• Functional capacity: "+s); }
+  if(ans.biomarkers!=null) L.push("• Biomarkers (BNP/NT-proBNP): "+(ans.biomarkers===0?"Normal":"Elevated"));
+  if(ans.test!=null) L.push("• Further cardiac testing would change management: "+(ans.test===0?"No":"Yes"));
+  L.push("");
+  L.push("RECOMMENDATION: "+r.t+" (COR "+r.cor+" · "+r.sec+")");
+  L.push(r.corEnd? r.p.charAt(0).toUpperCase()+r.p.slice(1) : r.p);
+  L.push("");
+  L.push("Per 2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery (J Am Coll Cardiol 2024). Decision support — not a substitute for clinical judgment.");
+  return L.join("\n");
+}
+function copySummary(term){
+  const note=buildNote(term); const btn=document.getElementById('copyBtn');
+  const done=()=>{ if(btn){ const o=btn.innerHTML; btn.innerHTML=CHECK2+' Copied'; setTimeout(()=>{if(btn)btn.innerHTML=o;},1600);} };
+  if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(note).then(done).catch(()=>fallbackCopy(note,done)); }
+  else fallbackCopy(note,done);
+}
+function fallbackCopy(text,cb){ const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');cb&&cb();}catch(e){} document.body.removeChild(ta); }
+
+function answer(key,oi,fromCalc){
+  const order=["urgency","acute","modifiers","risk","func","biomarkers","test"];
+  if((key==='risk' && !fromCalc) || order.indexOf(key)<order.indexOf('risk')) rcriResult=null;
+  ans[key]=oi;
+  const idx=order.indexOf(key);
+  for(let i=idx+1;i<order.length;i++) ans[order[i]]=null;
+  if(key==='modifiers' && oi===0){ ans.risk=0; renderRows(); openCalc('rcri'); return; } // force Elevated + prompt RCRI
+  renderRows();
+}
+function resetAll(){ ans={urgency:null,acute:null,modifiers:null,risk:null,func:null,biomarkers:null,test:null}; rcriResult=null; dasiResult=null; calcLast={rcri:null,dasi:null,frail:null}; rcriS=Array(6).fill(false); dasiS=Array(12).fill(false); frailS=Array(5).fill(false); acuteS=Array(ACUTE_LIST.length).fill(false); modS=Array(MODIFIER_LIST.length).fill(false); started=false; renderRows(); go("assess"); }
+
+/* ---- bottom-sheet calculators ---- */
+let sheetKind=null, rcriS=Array(6).fill(false), dasiS=Array(12).fill(false), frailS=Array(5).fill(false);
+let calcLast={rcri:null,dasi:null,frail:null};
+function openCalc(kind){
+  sheetKind=kind;
+  const list=document.getElementById('sheet-list');
+  if(kind==='rcri'){
+    document.getElementById('sheet-title').textContent='RCRI';
+    document.getElementById('sheet-lead').textContent='One point each. Elevated = RCRI > 1.';
+    list.innerHTML=RCRI.map((it,i)=>`<div class="chk ${rcriS[i]?'on':''}" onclick="tog(${i})"><div class="box">${CHECK}</div><div class="lbl">${it.t}</div></div>`).join('');
+  } else if(kind==='frail'){
+    document.getElementById('sheet-title').textContent='FRAIL Scale';
+    document.getElementById('sheet-lead').textContent='One point each. 0 = nonfrail · 1–2 = prefrail · 3–5 = frail (Table 6, §3.3).';
+    list.innerHTML=FRAIL.map((it,i)=>`<div class="chk ${frailS[i]?'on':''}" onclick="tog(${i})"><div class="box">${CHECK}</div><div class="lbl">${it.t}</div></div>`).join('');
+  } else {
+    document.getElementById('sheet-title').textContent='DASI';
+    document.getElementById('sheet-lead').textContent='Tap each activity the patient can do. Poor = DASI ≤ 34 (≈ <4 METs).';
+    list.innerHTML=DASI.map((it,i)=>`<div class="chk ${dasiS[i]?'on':''}" onclick="tog(${i})"><div class="box">${CHECK}</div><div class="lbl">${it.t}</div><div class="wt mono">${it.w.toFixed(2)}</div></div>`).join('');
+  }
+  updSheet();
+  document.getElementById('sheetbg').classList.add('open');
+  document.getElementById('sheet').classList.add('open');
+}
+function closeSheet(){
+  if(document.getElementById('v-calc').classList.contains('active')){
+    if(sheetKind==='rcri'){const n=rcriS.filter(Boolean).length; calcLast.rcri={score:n,mace:rcriMace(n)};}
+    else if(sheetKind==='dasi'){let s=0;dasiS.forEach((o,i)=>{if(o)s+=DASI[i].w;}); calcLast.dasi={sum:s,mets:(s*0.43+9.6)/3.5};}
+    else if(sheetKind==='frail'){calcLast.frail=frailS.filter(Boolean).length;}
+    renderCalcTab();
+  }
+  document.getElementById('sheetbg').classList.remove('open'); document.getElementById('sheet').classList.remove('open');
+}
+function tog(i){
+  const s=sheetKind==='rcri'?rcriS:sheetKind==='frail'?frailS:dasiS; s[i]=!s[i];
+  document.querySelectorAll('#sheet-list .chk')[i].classList.toggle('on',s[i]); updSheet();
+}
+function updSheet(){
+  const f=document.getElementById('sheet-foot');
+  if(sheetKind==='rcri'){
+    const n=rcriS.filter(Boolean).length, hi=n>1;
+    f.innerHTML=`<div><div class="num mono">${n}</div><div class="lab">RCRI · ~${rcriMace(n)}% MACE</div></div>
+      <div class="flag ${hi?'high':'low'}">${hi?'ELEVATED':'LOW'}</div>
+      <button class="apply" onclick="applyCalc()">Apply</button>`;
+  } else if(sheetKind==='frail'){
+    const n=frailS.filter(Boolean).length;
+    const cat = n>=3?'FRAIL':n>=1?'PREFRAIL':'NONFRAIL';
+    const cls = n>=3?'high':n>=1?'poor':'low';
+    f.innerHTML=`<div><div class="num mono">${n}</div><div class="lab">FRAIL Scale (/5)</div></div>
+      <div class="flag ${cls}">${cat}</div>
+      <button class="apply" onclick="closeSheet()">Done</button>`;
+  } else {
+    let sum=0; dasiS.forEach((o,i)=>{if(o)sum+=DASI[i].w;}); const mets=(sum*0.43+9.6)/3.5, poor=sum<=34;
+    f.innerHTML=`<div><div class="num mono">${sum.toFixed(1)}</div><div class="lab">DASI · ${mets.toFixed(1)} METs</div></div>
+      <div class="flag ${poor?'poor':'adeq'}">${poor?'POOR':'ADEQUATE'}</div>
+      <button class="apply" onclick="applyCalc()">Apply</button>`;
+  }
+}
+function applyCalc(){
+  const onCalcTab=document.getElementById('v-calc').classList.contains('active');
+  if(!onCalcTab){
+    if(sheetKind==='rcri'){
+      const n=rcriS.filter(Boolean).length; rcriResult={score:n,mace:rcriMace(n)};
+      if(ans.modifiers===0){ ans.risk=0; renderRows(); }   // modifier forces Elevated regardless of score
+      else answer('risk',n>1?0:1,true);
+    }
+    else { let sum=0; dasiS.forEach((o,i)=>{if(o)sum+=DASI[i].w;}); dasiResult={sum,mets:(sum*0.43+9.6)/3.5}; answer('func',sum<=34?1:0); }
+  }
+  closeSheet();
+}
+
+/* ---- tabs ---- */
+function go(tab){
+  document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));
+  document.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));
+  document.getElementById('v-'+tab).classList.add('active');
+  document.querySelector('.tab[data-tab="'+tab+'"]').classList.add('active');
+  document.getElementById('appsub').textContent={assess:"Preop clearance for non-cardiac surgery",calc:"Validated calculators",ref:"Guideline quick reference"}[tab];
+}
+function renderCalcTab(){
+  const rcriLast=calcLast.rcri?`RCRI ${calcLast.rcri.score} · ~${calcLast.rcri.mace}% MACE`:'';
+  const dasiLast=calcLast.dasi?`DASI ${calcLast.dasi.sum.toFixed(1)} · ~${calcLast.dasi.mets.toFixed(1)} METs`:'';
+  const fN=calcLast.frail; const frailLast=(fN!=null)?`${fN}/5 · ${fN>=3?'Frail':fN>=1?'Prefrail':'Nonfrail'}`:'';
+  const calc=(kind,label,when,last,bg)=>`
+    <div class="calcrow2">
+      <button class="apply" style="margin:0;background:${bg};min-width:118px" onclick="openCalc('${kind}')">${label}</button>
+      <div class="calcmeta"><div class="calcwhen">${when}</div>${last?`<div class="calclast">Last: ${last}</div>`:''}</div>
+    </div>`;
+  document.getElementById('v-calc').innerHTML=`
+    <div class="card"><div class="eyebrow">Standalone</div><h2>Quick calculators</h2>
+      <p class="lead">RCRI and DASI also open inside the assessment. Tap to compute here anytime.</p>
+      <div style="margin-top:12px;display:flex;flex-direction:column;gap:11px">
+        ${calc('rcri','check RCRI','Estimate 30-day MACE risk from 6 clinical predictors.',rcriLast,'var(--navy)')}
+        ${calc('dasi','check DASI','Grade functional capacity in METs (poor if ≤ 34).',dasiLast,'var(--navy)')}
+        ${calc('frail','check FRAIL','Screen frailty — 5 items (§3.3, Table 6).',frailLast,'var(--teal)')}
+      </div></div>`;
+}
+function renderRefTab(){
+  const meds=REFMEDS.map(m=>`<div class="medrow"><div class="drug">${m[0]}</div><div class="act"><span class="pill ${m[2]}">${m[1]}</span></div><div class="tm">${m[3]}</div></div>`).join('');
+  const com=COMORB.map(c=>`<div class="refcard"><div class="rt"><h3>${c[0]}</h3><span class="badge2">${c[1]}</span></div><p>${c[2]}</p></div>`).join('');
+  const cite=`<div class="eyebrow2">Source</div>
+    <div class="card"><p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:0">
+      Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for
+      Perioperative Cardiovascular Management for Noncardiac Surgery: A Report of the American College of Cardiology/
+      American Heart Association Joint Committee on Clinical Practice Guidelines.
+      <i>J Am Coll Cardiol.</i> Published online September 24, 2024.</p>
+      <p style="font-size:12px;margin:8px 0 0"><a href="https://doi.org/10.1016/j.jacc.2024.06.013" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.jacc.2024.06.013</a></p>
+      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Section references (§) throughout this app point to sections of this guideline. Frailty tool from Table 6, §3.3.</p></div>`;
+  document.getElementById('v-ref').innerHTML=`<div class="eyebrow2">Perioperative medication timing · §7</div><div class="card" style="padding:4px 15px">${meds}</div><div class="eyebrow2">Comorbidity cards · §6</div>${com}${cite}`;
+}
+
+renderRows(); renderCalcTab(); renderRefTab();
+
+function fitPhone(){
+  const s=Math.min(1,(window.innerHeight-24)/874,(window.innerWidth-24)/402);
+  document.querySelector('.phone').style.transform='scale('+s+')';
+}
+window.addEventListener('resize',fitPhone); fitPhone();
+</script>
+</body>
+</html>
