@@ -56,6 +56,20 @@
     font-size:15px;font-weight:600;color:#fff;background:var(--navy);flex:none}
   .statusbar .dots{display:flex;gap:6px;align-items:center}
 
+  /* ===== Home Screen (standalone) full-screen mode =====
+     When launched from the iPhone Home Screen, fill the real screen:
+     drop the simulated bezel/scaling, hide the fake status bar / island /
+     home indicator, and defer to the device's real safe areas. */
+  body.standalone{background:var(--navy);padding:0;display:block;min-height:0}
+  body.standalone .phone{width:100vw;height:100vh;height:100dvh;border-radius:0;
+    box-shadow:none;transform:none!important}
+  body.standalone .dyn,
+  body.standalone .statusbar,
+  body.standalone .homebar{display:none}
+  body.standalone header.appbar{padding-top:calc(env(safe-area-inset-top) + 8px)}
+  body.standalone .tabbar{height:auto;min-height:70px;
+    padding-bottom:calc(env(safe-area-inset-bottom) + 4px)}
+
   header.appbar{background:var(--navy);color:#fff;padding:8px 18px 12px;flex:none;display:flex;align-items:center;gap:11px}
   .appbar .mark{width:32px;height:32px;border-radius:9px;background:linear-gradient(140deg,var(--teal-l),var(--teal));
     display:flex;align-items:center;justify-content:center;font-weight:800;font-size:15px;color:#fff;flex:none}
@@ -636,8 +650,12 @@ function renderRefTab(){
 renderRows(); renderCalcTab(); renderRefTab();
 
 function fitPhone(){
+  if(document.body.classList.contains('standalone')){ document.querySelector('.phone').style.transform=''; return; }
   const s=Math.min(1,(window.innerHeight-24)/874,(window.innerWidth-24)/402);
   document.querySelector('.phone').style.transform='scale('+s+')';
+}
+if(window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true){
+  document.body.classList.add('standalone');
 }
 window.addEventListener('resize',fitPhone); fitPhone();
 </script>
