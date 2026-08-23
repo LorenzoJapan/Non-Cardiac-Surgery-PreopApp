@@ -1,5 +1,7 @@
 # Preop Clearance
 
+**Developed by MDGadgetz LLC**
+
 A single‑file, clinician‑facing web app that implements the stepwise decision algorithm
 (**Figure 1**) of the 2024 AHA/ACC guideline for **perioperative cardiovascular management of
 non‑cardiac surgery**. It walks through a preoperative cardiac assessment one question at a
