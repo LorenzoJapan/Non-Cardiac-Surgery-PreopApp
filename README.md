@@ -3,7 +3,7 @@
 **Developed by MDGadgetz LLC**
 
 A single‑file, clinician‑facing web app that implements the stepwise decision algorithm
-(**Figure 1**) of the 2024 AHA/ACC guideline for **perioperative cardiovascular management of
+(**Figure 1**) of the 2026 AHA/ACC guideline for **perioperative cardiovascular management of
 non‑cardiac surgery**. It walks through a preoperative cardiac assessment one question at a
 time and returns a guideline‑referenced recommendation.
 
@@ -32,17 +32,21 @@ app publicly accessible; the in‑app disclaimer applies.*
 
 ## What it does
 
-Seven‑step assessment matching guideline Figure 1: surgical urgency → acute cardiac condition →
-risk modifiers → RCRI‑gated MACE risk → DASI‑gated functional capacity → biomarkers →
-testing decision. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; a
+Eight‑step assessment matching guideline Figure 1: cardiovascular risk factors/disease/symptoms →
+surgical urgency → acute cardiac condition → risk modifiers → RCRI‑gated MACE risk → DASI‑gated
+functional capacity → will further testing impact care → biomarkers. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; a
 reference tab (medication timing, comorbidity cards, source citation); dark mode; larger‑text
 toggle; WCAG‑AA contrast.
 
 ## Source
 
-Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM
+Thompson A, Fleischmann KE, Smilowitz NR, et al. 2026 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM
 Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery. *J Am Coll Cardiol.*
-2024. doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013)
+2026;88(13):1543-1643. doi:[10.1016/j.jacc.2026.06.017](https://doi.org/10.1016/j.jacc.2026.06.017)
+
+The 2026 edition is a surveillance reaffirmation of the 2024 guideline
+(doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013)); its
+recommendations, figures, and tables are unchanged.
 
 ## Disclaimer
 

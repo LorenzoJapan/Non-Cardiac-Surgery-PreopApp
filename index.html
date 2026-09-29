@@ -91,6 +91,7 @@
   .result.cor2a{background:linear-gradient(135deg,#B8720A,#9c6108)}
   .result.cor2b{background:linear-gradient(135deg,#C85E12,#a94e0f)}
   .result.cor3{background:linear-gradient(135deg,#C62828,#a51f1f)}
+  .result.corn{background:linear-gradient(135deg,#12807D,#0E6B69)}
   .result .rtop{display:flex;align-items:center;gap:8px;min-height:22px}
   .result .badge{background:rgba(255,255,255,.22);padding:3px 10px;border-radius:20px;font-size:12px;font-weight:700;letter-spacing:.03em}
   .result .rprompt{font-size:15px;color:rgba(255,255,255,.9);font-weight:600}
@@ -136,6 +137,7 @@
   .qchk.on .box{background:var(--teal);border-color:var(--teal)}
   .qchk .box svg{opacity:0;transition:opacity .13s}.qchk.on .box svg{opacity:1}
   .qchk .lbl{font-size:13.5px;font-weight:500;line-height:1.2}
+  .qchk .rmini{padding:4px 10px;font-size:12px}
   .qcontinue{margin-top:8px;width:100%;padding:12px;border:none;border-radius:12px;background:var(--navy);color:#fff;
     font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:background .15s}
   .qcontinue:active{background:var(--navy-d)}
@@ -154,6 +156,7 @@
   .row.forced .seg{pointer-events:none}
   .row.calcrow .seg{pointer-events:none}
   .row.calcrow .seg button{opacity:.9}
+  .row.calcrow .seg button.free{pointer-events:auto;opacity:1}
   .rmini.need{background:var(--teal);color:#fff;animation:pulse 1.6s ease-in-out infinite}
   @keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(19,122,127,.35)}50%{box-shadow:0 0 0 5px rgba(19,122,127,0)}}
   .row.riskrow{flex-grow:1.7}
@@ -276,7 +279,7 @@
       <div class="rows" id="rows"></div>
       <div class="foot"><div class="disc">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C79A2E" stroke-width="2"><path d="M12 9v4M12 17h.01M10.3 3.9L2 18a2 2 0 001.7 3h16.6a2 2 0 001.7-3L13.7 3.9a2 2 0 00-3.4 0z"/></svg>
-        <p><b>Decision support, not a directive</b> — not validated; does not replace clinical judgment. 2024 AHA/ACC.</p>
+        <p><b>Decision support, not a directive</b> — not validated; does not replace clinical judgment. 2026 AHA/ACC.</p>
       </div>
       <p style="font-size:11px;color:var(--muted);text-align:center;margin-top:8px">Developed by MDGadgetz LLC</p>
       </div>
@@ -309,22 +312,22 @@
 
 <script>
 /* ---- clinical data (from PreopCardiac_App_v1 spec) ---- */
-const RCRI=[{t:"High-risk surgery (intraperitoneal, intrathoracic, suprainguinal vascular)"},{t:"History of ischemic heart disease"},{t:"History of congestive heart failure"},{t:"History of cerebrovascular disease (stroke/TIA)"},{t:"Insulin therapy for diabetes"},{t:"Preoperative serum creatinine > 2.0 mg/dL"}];
+const RCRI=[{t:"High-risk surgery (intraperitoneal, intrathoracic, or vascular)"},{t:"History of ischemic heart disease"},{t:"History of congestive heart failure"},{t:"History of cerebrovascular disease (stroke/TIA)"},{t:"Insulin therapy for diabetes"},{t:"Preoperative serum creatinine ≥ 2.0 mg/dL"}];
 const FRAIL=[{t:"Fatigue — tired most or all of the time"},{t:"Resistance — difficulty climbing a flight of stairs"},{t:"Ambulation — difficulty walking one block"},{t:"Illnesses — more than 5 chronic illnesses"},{t:"Loss of weight — unintentional ≥ 5% in the past year"}];
 const DASI=[{t:"Eat, dress, bathe, use toilet?",w:2.75},{t:"Walk indoors around the house?",w:1.75},{t:"Walk 1–2 blocks on level ground?",w:2.75},{t:"Climb a flight of stairs / up a hill?",w:5.50},{t:"Run a short distance?",w:8.00},{t:"Light housework (dusting, dishes)?",w:2.70},{t:"Moderate work (vacuum, groceries)?",w:3.50},{t:"Heavy work (scrub floors, lift)?",w:8.00},{t:"Yardwork (rake, weed, mow)?",w:4.50},{t:"Have sexual relations?",w:5.25},{t:"Moderate recreation (golf, dancing)?",w:6.00},{t:"Strenuous sports (swim, tennis, ski)?",w:7.50}];
-const ACUTE_LIST=["Acute coronary syndrome (ACS)","Acute decompensated heart failure","Significant / uncontrolled arrhythmia","Severe symptomatic valve disease (e.g. AS)"];
-const MODIFIER_LIST=["Severe valvular heart disease (VHD)","Severe pulmonary hypertension","Elevated-risk congenital heart disease (CHD)","Prior cardiac stents / CABG","Recent stroke","CIED (pacemaker / ICD present)","Frailty"];
+const ACUTE_LIST=["Acute coronary syndrome (ACS)","Decompensated heart failure","Unstable cardiac arrhythmia"];
+const MODIFIER_LIST=["Severe valvular heart disease (VHD)","Severe pulmonary hypertension","Elevated-risk congenital heart disease (CHD)","Prior cardiac stents / CABG","Recent stroke (< 3 months)","CIED (pacemaker / ICD present)","Frailty (FRAIL ≥ 3)"];
 const RESULTS={
-  EMERGENT:{cor:"1",sec:"§1.5",t:"Proceed with surveillance",p:"Emergency/urgent — proceed to surgery with perioperative monitoring and medical optimization. Limited time for extended workup.",corEnd:true},
-  ACS_DEFER:{cor:"1",sec:"§6.1.1",t:"Hold on surgery",p:"Manage the acute cardiac condition and defer elective surgery until stabilized/treated/revascularized and improved.",corEnd:true},
-  LOW:{cor:"1",sec:"Fig 1",t:"Proceed — no testing",p:"Predicted MACE < 1%. Proceed to surgery; no further cardiac testing indicated.",corEnd:true},
-  ADEQ:{cor:"2a",sec:"§3.2",t:"Proceed with optimization",p:"≥ 4 METs (DASI > 34). Proceed with medical optimization; obtain a baseline ECG and continue GDMT. Further testing generally not needed.",corEnd:true},
-  BIOMARKER_OK:{cor:"2a",sec:"§3.4",t:"Normal biomarkers — proceed",p:"Normal BNP/NT-proBNP supports proceeding with medical optimization and postoperative troponin on days 1-3.",corEnd:true},
-  OPTIMIZE:{cor:"1",sec:"§7 / §9.1",t:"Optimize & proceed",p:"Since further testing would not change management, proceed with medical optimization + postoperative troponin surveillance days 1-3.",corEnd:true},
-  TEST:{cor:"2b",sec:"§4.3",t:"Selective testing",p:"Proceed with cardiac evaluation (TTE, CCTA)/stress testing only if results will change management (e.g. severe CAD with LM/multivessel disease → revascularization).",corEnd:true},
+  NO_RISK:{cor:null,sec:"Fig 1",t:"Proceed to surgery",p:"No cardiovascular risk factors, disease, or symptoms. Proceed to surgery; no further preoperative cardiac assessment indicated.",corEnd:true},
+  EMERGENT:{cor:null,sec:"Fig 1 · Table 2",t:"Proceed to surgery",p:"Emergency surgery (< 2 h). Proceed to surgery; there is very limited or no time for preoperative cardiac evaluation.",corEnd:true},
+  ACS_DEFER:{cor:null,sec:"Fig 1",t:"Hold on surgery",p:"Manage the acute cardiac condition. Multidisciplinary team discussion regarding deferral of surgery, noninvasive treatment, or palliation. For ACS: coronary revascularization as appropriate and deferral of elective surgery (COR 1, §6.1.1).",corEnd:true},
+  LOW:{cor:null,sec:"Fig 1",t:"Proceed — no testing",p:"Predicted MACE < 1%. Proceed to surgery; no further cardiac testing indicated.",corEnd:true},
+  ADEQ:{cor:"2a",sec:"§3.2",t:"Proceed with optimization",p:"≥ 4 METs (DASI > 34). Proceed to surgery with medical optimization; further testing generally not needed. Consider a baseline 12-lead ECG (2b if asymptomatic without established CVD; 2a if established CVD or symptoms) and continue GDMT.",corEnd:true},
+  NO_IMPACT:{cor:null,sec:"Fig 1",t:"Proceed or consider alternatives",p:"Further testing would not impact decision-making or perioperative care. Proceed to surgery, or consider alternative strategies: deferral of surgery, noninvasive treatment, or palliation.",corEnd:true},
+  BIOMARKER_OK:{cor:"2a",sec:"§3.4",t:"Normal biomarkers — proceed",p:"Normal BNP/NT-proBNP (and troponin, if measured). Proceed to surgery.",corEnd:true},
+  BIOMARKER_HIGH:{cor:"2b",sec:"§4.3 · §4.5 · §9.1",t:"Team discussion — selective testing",p:"Abnormal biomarkers. Multidisciplinary discussion of risks and benefits of additional cardiac evaluation: consider echocardiography, noninvasive stress testing (2b), or CCTA (2b). Low-risk findings → proceed. Elevated-risk findings (e.g. LM/multivessel CAD) or evaluation deferred → consider deferral, noninvasive or invasive treatment, palliation, or proceed; consider postoperative troponin at 24 and 48 h (2b, §9.1).",corEnd:true},
 };
-const MEDS=[["Statins","Continue","cont"],["Beta blockers","Continue","cont"],["SGLT2 inhibitors","Hold 3–4 d","hold"],["ACEi/ARB","Individualize","indv"],["Troponin surveil.","If elevated risk","cont"]];
-const REFMEDS=[["Statins","Continue","cont","Perioperative period"],["ACEi / ARB","Individualize","indv","Consider hold AM of surgery"],["Beta blockers","Continue","cont","Don't start acutely"],["SGLT2 inhibitors","Hold","hold","3–4 days before"],["DAPT / stents","Individualize","indv","~6 mo after DES"],["Anticoagulants","Individualize","indv","Bridge only highest risk"]];
+const REFMEDS=[["Statins","Continue","cont","Perioperative period"],["ACEi / ARB","Individualize","indv","HTN, elevated-risk surgery: omit 24 h before (2b) · HFrEF: continue (2a)"],["Beta blockers","Continue","cont","Don't start acutely"],["SGLT2 inhibitors","Hold","hold","3–4 days before"],["DAPT / stents","Individualize","indv","Elective NCS after DES: ≥ 6 mo (CCD) · ≥ 12 mo (ACS)"],["Anticoagulants","Individualize","indv","Bridge only highest risk"]];
 const COMORB=[["Coronary artery disease","§6.1","Optimize ASCVD therapy. ACS defers surgery; routine revascularization not indicated for non–left-main disease."],["Hypertension / BP","§6.2","Optimize poorly controlled HTN before elevated-risk surgery. Don't cancel for mild–moderate elevation alone. If ≥ 180/110 mm Hg + elevated-risk surgery + RCRI factors → consider deferral to optimize BP. If < 180/110 mm Hg and no RCRI factors → hypertension alone is generally not a reason to cancel."],["Heart failure","§6.3","Assess volume status & LV function. Hold SGLT2i 3–4 d pre-op; continue GDMT where appropriate."],["Valvular disease","§6.4","Severe symptomatic disease may warrant intervention before elevated-risk elective surgery."],["Atrial fibrillation","§6.5","Rate/rhythm & anticoagulation planning. New perioperative AF needs close follow-up."],["CIED (PPM/ICD)","§6.6","Device plan: interrogation & reprogramming per procedure and EMI risk."],["Prior stroke / TIA","§6.7","Delay elective surgery ≥ 3 months after recent stroke where feasible."],["Obstructive sleep apnea","§6.8","Screen and plan perioperative airway/monitoring; continue PAP therapy."]];
 const CHECK='<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.6"><path d="M2 7.5l3 3 7-7"/></svg>';
 const PENCIL='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>';
@@ -333,34 +336,36 @@ const BOOK='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="
 const CHECK2='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M4 12l5 5L20 6"/></svg>';
 
 /* ---- state ---- */
-let ans={urgency:null,acute:null,modifiers:null,risk:null,func:null,biomarkers:null,test:null};
+let ans={cvrisk:null,urgency:null,acute:null,modifiers:null,risk:null,func:null,test:null,biomarkers:null};
 let rcriResult=null, dasiResult=null;
 let acuteS=Array(ACUTE_LIST.length).fill(false), modS=Array(MODIFIER_LIST.length).fill(false);
 function rcriMace(n){ return n<=0?'3.9':n===1?'6.0':n===2?'10.1':'15'; }
 
 const ROWS=[
-  {key:"urgency",n:1,title:"Surgical urgency?",opts:[
+  {key:"cvrisk",n:1,title:"CV risk factors, disease, or symptoms?",hint:"HTN · smoking · high cholesterol · diabetes · women > 65 y, men > 55 y · obesity · family history of premature CAD",opts:[
+    {l:"Yes",cls:"warn"},{l:"No",tl:"proceed",cls:"good",term:"NO_RISK"}]},
+  {key:"urgency",n:2,title:"Surgical urgency?",opts:[
     {l:"Emergency",tl:"<2h",cls:"danger",term:"EMERGENT"},
-    {l:"Urgent",tl:"2–24h",cls:"warn",term:"EMERGENT"},
+    {l:"Urgent",tl:"2–24h",cls:"warn"},
     {l:"Time-sens",tl:"≤3mo"},{l:"Elective",tl:"planned"}]},
-  {key:"acute",n:2,title:"Acute cardiac condition?",hint:"ACS · decompensated HF · significant arrhythmia · severe valve disease",opts:[
+  {key:"acute",n:3,title:"Acute cardiac condition?",hint:"ACS · decompensated HF · unstable arrhythmia",opts:[
     {l:"Present",cls:"danger",term:"ACS_DEFER"},{l:"None"}]},
-  {key:"modifiers",n:3,title:"Risk modifiers present?",hint:"Valvular · pulm HTN · HCM · CIED · arrhythmia · stroke · OSA",opts:[
+  {key:"modifiers",n:4,title:"Risk modifiers present?",hint:"Severe VHD · severe pulm HTN · elevated-risk CHD · prior stents/CABG · recent stroke · CIED · frailty",opts:[
     {l:"Present",cls:"warn"},{l:"None"}]},
-  {key:"risk",n:4,title:"Risk of MACE?",mini:"RCRI",opts:[
+  {key:"risk",n:5,title:"Risk of MACE?",mini:"RCRI",opts:[
     {l:"Elevated",tl:"≥1% / RCRI>1",cls:"warn"},{l:"Low",tl:"<1%",cls:"good",term:"LOW"}]},
-  {key:"func",n:5,title:"Functional capacity?",mini:"DASI",hint:"Check 12-lead ECG, consider TTE, optimize CV risk with GDMT if appropriate, discuss with team timing and testing value — then assess functional capacity",opts:[
-    {l:"Adequate",tl:"≥4 METs",cls:"good",term:"ADEQ"},{l:"Poor",tl:"<4 METs",cls:"warn"}]},
-  {key:"biomarkers",n:6,title:"Biomarkers (BNP / NT-proBNP)?",hint:"BNP >92 · NT-proBNP ≥300 · troponin >URL",opts:[
-    {l:"Normal",cls:"good",term:"BIOMARKER_OK"},{l:"Elevated",cls:"warn"}]},
-  {key:"test",n:7,title:"Would cardiac testing change plan?",opts:[
-    {l:"No",tl:"proceed",term:"OPTIMIZE"},{l:"Yes",tl:"test",cls:"warn",term:"TEST"}]},
+  {key:"func",n:6,title:"Functional capacity?",mini:"DASI",hint:"Complete the preliminary steps for this risk group, then assess functional capacity",opts:[
+    {l:"Adequate",tl:"≥4 METs",cls:"good",term:"ADEQ"},{l:"Poor",tl:"<4 METs",cls:"warn"},{l:"Unknown",tl:"can't assess",cls:"warn",free:true}]},
+  {key:"test",n:7,title:"Will further testing impact care?",hint:"Would it change decision-making or perioperative care?",opts:[
+    {l:"No",tl:"proceed",term:"NO_IMPACT"},{l:"Yes",tl:"biomarkers",cls:"warn"}]},
+  {key:"biomarkers",n:8,title:"Biomarkers (BNP / NT-proBNP)?",hint:"BNP >92 · NT-proBNP ≥300 · troponin >URL",opts:[
+    {l:"Normal",cls:"good",term:"BIOMARKER_OK"},{l:"Elevated",cls:"warn",term:"BIOMARKER_HIGH"}]},
 ];
 const ROW_BY=Object.fromEntries(ROWS.map(r=>[r.key,r]));
 
 /* which rows are active given branch logic; returns {activeIdx, terminal} */
 function evalFlow(){
-  const order=["urgency","acute","modifiers","risk","func","biomarkers","test"];
+  const order=["cvrisk","urgency","acute","modifiers","risk","func","test","biomarkers"];
   for(let i=0;i<order.length;i++){
     const k=order[i]; const v=ans[k];
     if(v===null) return {activeIdx:i,terminal:null};
@@ -389,7 +394,10 @@ function activeRowHTML(r){
   if(r.key==='acute'||r.key==='modifiers'){
     const list=r.key==='acute'?ACUTE_LIST:MODIFIER_LIST;
     const st=r.key==='acute'?acuteS:modS;
-    const items=list.map((t,i)=>`<div class="qchk ${st[i]?'on':''}" onclick="togCond('${r.key}',${i})"><div class="box">${CHECK}</div><div class="lbl">${t}</div></div>`).join('');
+    const items=list.map((t,i)=>{
+      const frailBtn = (r.key==='modifiers' && /^Frailty/.test(t)) ? `<button class="rmini" onclick="event.stopPropagation();openCalc('frail')">check FRAIL</button>` : '';
+      return `<div class="qchk ${st[i]?'on':''}" onclick="togCond('${r.key}',${i})"><div class="box">${CHECK}</div><div class="lbl">${t}</div>${frailBtn}</div>`;
+    }).join('');
     const any=st.some(Boolean);
     return `<div class="row active">
       <div class="rlabel"><span class="rnum">${r.n}</span><span class="rtitle">${r.title}</span></div>
@@ -401,14 +409,14 @@ function activeRowHTML(r){
   const mini=r.mini?`<button class="rmini ${needCalc?'need':''}" onclick="openCalc('${r.mini.toLowerCase()}')">check ${r.mini}</button>`:'';
   let hintText=r.hint;
   if(r.key==='func'){
-    hintText="Check 12-lead ECG, consider TTE, optimize CV risk with GDMT if appropriate, "
-      + (ans.modifiers===0 ? "discuss with team timing and further cardiac testing value, then assess functional capacity"
-                           : "then assess functional capacity");
+    hintText = ans.modifiers===0
+      ? "Team consultation on timing and testing · 12-lead ECG if established CVD or symptoms (2a) · TTE if suspected moderate/severe valve disease, new dyspnea, or new/worsening LV dysfunction · consider GDMT — then assess functional capacity"
+      : "Consider 12-lead ECG if asymptomatic without established CVD (2b) · consider GDMT — then assess functional capacity";
   }
   const hint=hintText?`<div class="rhint">${hintText}</div>`:'';
   const segs=r.opts.map((o,oi)=>{
     const sel=v===oi?'sel '+(o.cls||''):'';
-    return `<button class="${sel}" onclick="answer('${r.key}',${oi})"><span>${o.l}</span>${o.tl?`<span class="tl">${o.tl}</span>`:''}</button>`;
+    return `<button class="${sel} ${o.free?'free':''}" onclick="answer('${r.key}',${oi})"><span>${o.l}</span>${o.tl?`<span class="tl">${o.tl}</span>`:''}</button>`;
   }).join('');
   return `<div class="row active ${r.key==='risk'?'riskrow':''} ${r.mini?'calcrow':''}">
     <div class="rlabel"><span class="rnum">${r.n}</span><span class="rtitle">${r.title}</span>${mini}</div>
@@ -448,7 +456,7 @@ function renderRows(){
       `<div class="ov-card"><div class="ov-head">Assessment steps</div>${items}</div>
        <button class="ov-begin" onclick="startAssessment()">Begin patient assessment →</button>`;
     renderResult(null); renderProgress(0,null);
-    document.getElementById('rprompt').textContent='Preoperative cardiac clearance · 7 steps';
+    document.getElementById('rprompt').textContent='Preoperative cardiac clearance · '+ROWS.length+' steps';
     return;
   }
   const {activeIdx,terminal}=evalFlow();
@@ -467,7 +475,7 @@ function renderRows(){
   renderResult(terminal); renderProgress(activeIdx,terminal);
 }
 function editStep(key){
-  const order=["urgency","acute","modifiers","risk","func","biomarkers","test"];
+  const order=["cvrisk","urgency","acute","modifiers","risk","func","test","biomarkers"];
   const idx=order.indexOf(key);
   if(idx<=order.indexOf('risk')) rcriResult=null;
   for(let i=idx;i<order.length;i++) ans[order[i]]=null;
@@ -487,14 +495,14 @@ function renderResult(term){
     return;
   }
   const r=RESULTS[term];
-  el.className='result cor'+r.cor.replace(/[^0-9ab]/g,'');
+  el.className='result '+(r.cor?'cor'+r.cor.replace(/[^0-9ab]/g,''):'corn');
+  const corLbl = r.cor ? `COR ${r.cor} · ${r.sec}` : r.sec;
   rtop.style.display='none';
-  rt('rtitle').style.display=''; rt('rtitle').innerHTML = r.corEnd ? r.t : `<span class="badge" style="margin-right:8px">COR ${r.cor} · ${r.sec}</span>${r.t}`;
+  rt('rtitle').style.display=''; rt('rtitle').innerHTML = r.corEnd ? r.t : `<span class="badge" style="margin-right:8px">${corLbl}</span>${r.t}`;
   rt('rtext').style.display=''; rt('rtext').textContent=r.p;
-  const corTag = r.corEnd ? `  ·  <span style="opacity:.8;font-weight:700">COR ${r.cor} · ${r.sec}</span>` : '';
-  if(r.meds){ rt('rnote').style.display=''; rt('rnote').innerHTML='<b>Meds:</b> continue statin + β-blocker · hold SGLT2i 3–4 d · postop troponin if elevated risk'; }
-  else if(r.note){ rt('rnote').style.display=''; rt('rnote').innerHTML=r.note+corTag; }
-  else if(r.corEnd){ rt('rnote').style.display=''; rt('rnote').innerHTML=`<span style="opacity:.8;font-weight:700">COR ${r.cor} · ${r.sec}</span>`; }
+  const corTag = r.corEnd ? `  ·  <span style="opacity:.8;font-weight:700">${corLbl}</span>` : '';
+  if(r.note){ rt('rnote').style.display=''; rt('rnote').innerHTML=r.note+corTag; }
+  else if(r.corEnd){ rt('rnote').style.display=''; rt('rnote').innerHTML=`<span style="opacity:.8;font-weight:700">${corLbl}</span>`; }
   else rt('rnote').style.display='none';
   rt('ractions').style.display='';
   rt('ractions').innerHTML=`
@@ -507,18 +515,19 @@ function buildNote(term){
   const L=[];
   L.push("PREOPERATIVE CARDIAC CLEARANCE — non-cardiac surgery");
   L.push("");
-  L.push("• Surgical urgency: "+ROWS[0].opts[ans.urgency].l);
+  L.push("• CV risk factors, disease, or symptoms: "+(ans.cvrisk===0?"Yes":"No"));
+  if(ans.urgency!=null) L.push("• Surgical urgency: "+ROW_BY.urgency.opts[ans.urgency].l);
   if(ans.acute!=null) L.push("• Acute cardiac condition: "+(ans.acute===0?("Present — "+acuteList.join(", ")):"None"));
   if(ans.modifiers!=null) L.push("• Risk modifiers: "+(ans.modifiers===0?("Present — "+modList.join(", ")):"None"));
   if(ans.risk!=null){ let s=(ans.risk===0?"Elevated":"Low"); if(rcriResult) s+=` (RCRI ${rcriResult.score}, ~${rcriResult.mace}% MACE)`; else if(ans.modifiers===0) s+=" (risk modifier)"; L.push("• Risk of MACE: "+s); }
-  if(ans.func!=null){ let s=(ans.func===0?"Adequate (≥4 METs)":"Poor (<4 METs)"); if(dasiResult) s=`${ans.func===0?"Adequate":"Poor"} (DASI ${dasiResult.sum.toFixed(1)}, ~${dasiResult.mets.toFixed(1)} METs)`; L.push("• Functional capacity: "+s); }
+  if(ans.func!=null){ let s=(ans.func===0?"Adequate (≥4 METs)":ans.func===2?"Unknown — cannot be assessed (managed as poor)":"Poor (<4 METs)"); if(dasiResult && ans.func!==2) s=`${ans.func===0?"Adequate":"Poor"} (DASI ${dasiResult.sum.toFixed(1)}, ~${dasiResult.mets.toFixed(1)} METs)`; L.push("• Functional capacity: "+s); }
+  if(ans.test!=null) L.push("• Further testing would impact decision-making/perioperative care: "+(ans.test===0?"No":"Yes"));
   if(ans.biomarkers!=null) L.push("• Biomarkers (BNP/NT-proBNP): "+(ans.biomarkers===0?"Normal":"Elevated"));
-  if(ans.test!=null) L.push("• Further cardiac testing would change management: "+(ans.test===0?"No":"Yes"));
   L.push("");
-  L.push("RECOMMENDATION: "+r.t+" (COR "+r.cor+" · "+r.sec+")");
+  L.push("RECOMMENDATION: "+r.t+" ("+(r.cor?"COR "+r.cor+" · ":"")+r.sec+")");
   L.push(r.corEnd? r.p.charAt(0).toUpperCase()+r.p.slice(1) : r.p);
   L.push("");
-  L.push("Per 2024 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery (J Am Coll Cardiol 2024). Decision support — not a substitute for clinical judgment.");
+  L.push("Per 2026 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery (J Am Coll Cardiol. 2026;88(13):1543-1643). Decision support — not a substitute for clinical judgment.");
   return L.join("\n");
 }
 function copySummary(term){
@@ -530,15 +539,16 @@ function copySummary(term){
 function fallbackCopy(text,cb){ const ta=document.createElement('textarea'); ta.value=text; ta.style.position='fixed'; ta.style.opacity='0'; document.body.appendChild(ta); ta.select(); try{document.execCommand('copy');cb&&cb();}catch(e){} document.body.removeChild(ta); }
 
 function answer(key,oi,fromCalc){
-  const order=["urgency","acute","modifiers","risk","func","biomarkers","test"];
+  const order=["cvrisk","urgency","acute","modifiers","risk","func","test","biomarkers"];
   if((key==='risk' && !fromCalc) || order.indexOf(key)<order.indexOf('risk')) rcriResult=null;
   ans[key]=oi;
+  if(key==='func' && oi===2) dasiResult=null;   // unknown: no DASI score to report
   const idx=order.indexOf(key);
   for(let i=idx+1;i<order.length;i++) ans[order[i]]=null;
   if(key==='modifiers' && oi===0){ ans.risk=0; renderRows(); openCalc('rcri'); return; } // force Elevated + prompt RCRI
   renderRows();
 }
-function resetAll(){ ans={urgency:null,acute:null,modifiers:null,risk:null,func:null,biomarkers:null,test:null}; rcriResult=null; dasiResult=null; calcLast={rcri:null,dasi:null,frail:null}; rcriS=Array(6).fill(false); dasiS=Array(12).fill(false); frailS=Array(5).fill(false); acuteS=Array(ACUTE_LIST.length).fill(false); modS=Array(MODIFIER_LIST.length).fill(false); started=false; renderRows(); go("assess"); }
+function resetAll(){ ans={cvrisk:null,urgency:null,acute:null,modifiers:null,risk:null,func:null,test:null,biomarkers:null}; rcriResult=null; dasiResult=null; calcLast={rcri:null,dasi:null,frail:null}; rcriS=Array(6).fill(false); dasiS=Array(12).fill(false); frailS=Array(5).fill(false); acuteS=Array(ACUTE_LIST.length).fill(false); modS=Array(MODIFIER_LIST.length).fill(false); started=false; renderRows(); go("assess"); }
 
 /* ---- bottom-sheet calculators ---- */
 let sheetKind=null, rcriS=Array(6).fill(false), dasiS=Array(12).fill(false), frailS=Array(5).fill(false);
@@ -589,7 +599,9 @@ function updSheet(){
     const cls = n>=3?'high':n>=1?'poor':'low';
     f.innerHTML=`<div><div class="num mono">${n}</div><div class="lab">FRAIL Scale (/5)</div></div>
       <div class="flag ${cls}">${cat}</div>
-      <button class="apply" onclick="closeSheet()">Done</button>`;
+      ${document.getElementById('v-calc').classList.contains('active')
+        ? '<button class="apply" onclick="closeSheet()">Done</button>'
+        : '<button class="apply" onclick="applyCalc()">Apply</button>'}`;
   } else {
     let sum=0; dasiS.forEach((o,i)=>{if(o)sum+=DASI[i].w;}); const mets=(sum*0.43+9.6)/3.5, poor=sum<=34;
     f.innerHTML=`<div><div class="num mono">${sum.toFixed(1)}</div><div class="lab">DASI · ${mets.toFixed(1)} METs</div></div>
@@ -605,6 +617,7 @@ function applyCalc(){
       if(ans.modifiers===0){ ans.risk=0; renderRows(); }   // modifier forces Elevated regardless of score
       else answer('risk',n>1?0:1,true);
     }
+    else if(sheetKind==='frail'){ modS[MODIFIER_LIST.findIndex(t=>/^Frailty/.test(t))]=frailS.filter(Boolean).length>=3; renderRows(); }
     else { let sum=0; dasiS.forEach((o,i)=>{if(o)sum+=DASI[i].w;}); dasiResult={sum,mets:(sum*0.43+9.6)/3.5}; answer('func',sum<=34?1:0); }
   }
   closeSheet();
@@ -641,11 +654,12 @@ function renderRefTab(){
   const com=COMORB.map(c=>`<div class="refcard"><div class="rt"><h3>${c[0]}</h3><span class="badge2">${c[1]}</span></div><p>${c[2]}</p></div>`).join('');
   const cite=`<div class="eyebrow2">Source</div>
     <div class="card"><p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:0">
-      Thompson A, Fleischmann KE, Smilowitz NR, et al. 2024 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for
+      Thompson A, Fleischmann KE, Smilowitz NR, et al. 2026 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for
       Perioperative Cardiovascular Management for Noncardiac Surgery: A Report of the American College of Cardiology/
       American Heart Association Joint Committee on Clinical Practice Guidelines.
-      <i>J Am Coll Cardiol.</i> Published online September 24, 2024.</p>
-      <p style="font-size:12px;margin:8px 0 0"><a href="https://doi.org/10.1016/j.jacc.2024.06.013" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.jacc.2024.06.013</a></p>
+      <i>J Am Coll Cardiol.</i> 2026;88(13):1543-1643.</p>
+      <p style="font-size:12px;margin:8px 0 0"><a href="https://doi.org/10.1016/j.jacc.2026.06.017" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.jacc.2026.06.017</a></p>
+      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">The 2026 edition reaffirms the 2024 guideline (doi:10.1016/j.jacc.2024.06.013); recommendations, figures, and tables are unchanged.</p>
       <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Section references (§) throughout this app point to sections of this guideline. Frailty tool from Table 6, §3.3.</p>
       <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Developed by MDGadgetz LLC.</p></div>`;
   document.getElementById('v-ref').innerHTML=`<div class="eyebrow2">Perioperative medication timing · §7</div><div class="card" style="padding:4px 15px">${meds}</div><div class="eyebrow2">Comorbidity cards · §6</div>${com}${cite}`;

@@ -1,0 +1,5545 @@
+[
+ {
+  "id": "P001",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P002",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P003",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P004",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P005",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P006",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P007",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P008",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P009",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P010",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P011",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P012",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P013",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P014",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P015",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P016",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P017",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P018",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P019",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P020",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P021",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P022",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P023",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P024",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P025",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 4.5,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P026",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P027",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)",
+   "CIED"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P028",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P029",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P030",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P031",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P032",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P033",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P034",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P035",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P036",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P037",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P038",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P039",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P040",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P041",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P042",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P043",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P044",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P045",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P046",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P047",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P048",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P049",
+  "timing": "urgent",
+  "frail_score": 1,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P050",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P051",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P052",
+  "timing": "time-sensitive",
+  "frail_score": 2,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P053",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P054",
+  "timing": "urgent",
+  "frail_score": 2,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P055",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P056",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P057",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 9.95,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P058",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P059",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P060",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P061",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P062",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 18.95,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P063",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P064",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P065",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P066",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P067",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P068",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P069",
+  "timing": "urgent",
+  "frail_score": 1,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P070",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P071",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P072",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P073",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P074",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P075",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "CIED"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P076",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P077",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 42.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P078",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P079",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P080",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)",
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P081",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P082",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P083",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "elevated-risk CHD (\u00a76.3.3, Table 11)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P084",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "severe pulmonary hypertension (\u00a76.3.2)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P085",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P086",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P087",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P088",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P089",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe pulmonary hypertension (\u00a76.3.2)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P090",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P091",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P092",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)",
+   "CIED"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P093",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P094",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P095",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P096",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P097",
+  "timing": "urgent",
+  "frail_score": 4,
+  "modifiers": [
+   "prior coronary stents/CABG",
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 13.45,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P098",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P099",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P100",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P101",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P102",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P103",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P104",
+  "timing": "elective",
+  "frail_score": 5,
+  "modifiers": [
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P105",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe pulmonary hypertension (\u00a76.3.2)",
+   "CIED"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P106",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)",
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P107",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "CIED"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P108",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P109",
+  "timing": "time-sensitive",
+  "frail_score": 3,
+  "modifiers": [
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P110",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P111",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P112",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P113",
+  "timing": "elective",
+  "frail_score": 2,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 13.45,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P114",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P115",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P116",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P117",
+  "timing": "elective",
+  "frail_score": 3,
+  "modifiers": [
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P118",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P119",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P120",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P121",
+  "timing": "elective",
+  "frail_score": 5,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P122",
+  "timing": "elective",
+  "frail_score": 5,
+  "modifiers": [
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P123",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe pulmonary hypertension (\u00a76.3.2)",
+   "elevated-risk CHD (\u00a76.3.3, Table 11)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P124",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P125",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P126",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [
+   "CIED"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P127",
+  "timing": "time-sensitive",
+  "frail_score": 3,
+  "modifiers": [
+   "prior coronary stents/CABG",
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P128",
+  "timing": "elective",
+  "frail_score": 5,
+  "modifiers": [
+   "recent stroke (<3 mo, \u00a76.7)",
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 4,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P129",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 9.95,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P130",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P131",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P132",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P133",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P134",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P135",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 18.95,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P136",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P137",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P138",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "severe pulmonary hypertension (\u00a76.3.2)",
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P139",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "CIED"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P140",
+  "timing": "urgent",
+  "frail_score": 5,
+  "modifiers": [
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P141",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P142",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P143",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P144",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P145",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 13.45,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P146",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P147",
+  "timing": "elective",
+  "frail_score": 5,
+  "modifiers": [
+   "CIED",
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P148",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P149",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": true
+  },
+  "dasi": 13.45,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P150",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P151",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)",
+   "elevated-risk CHD (\u00a76.3.3, Table 11)"
+  ],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P152",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P153",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P154",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P155",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG",
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P156",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P157",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 3,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 18.95,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P158",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P159",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P160",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P161",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P162",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "NO_RISK",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P163",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P164",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P165",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P166",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P167",
+  "timing": "urgent",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "ACUTE_DEFER",
+  "content": {
+   "cor": null,
+   "must": [
+    "multidisciplinary",
+    "deferral"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P168",
+  "timing": "emergency",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 0,
+  "fc_branch": null,
+  "outcome": "EMERGENT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "urgent"
+   ]
+  }
+ },
+ {
+  "id": "P169",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": "modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P170",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe VHD (\u00a76.4)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P171",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "recent stroke (<3 mo, \u00a76.7)"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P172",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": true,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P173",
+  "timing": "elective",
+  "frail_score": 3,
+  "modifiers": [
+   "frailty (\u00a73.3)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P174",
+  "timing": "time-sensitive",
+  "frail_score": 2,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P175",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.0,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P176",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.0,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P177",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P178",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P179",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P180",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P181",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P182",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P183",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_OK",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "24 and 48",
+    "postoperative troponin"
+   ]
+  }
+ },
+ {
+  "id": "P184",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 0,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P185",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 34.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P186",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 28.7,
+  "fc_branch": "no_modifier",
+  "outcome": "BIOMARKER_HIGH",
+  "content": {
+   "cor": "2b",
+   "must": [
+    "multidisciplinary",
+    "echocardiography",
+    "stress",
+    "ccta",
+    "24 and 48"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P187",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P188",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P189",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": true
+  },
+  "dasi": 58.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P190",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P191",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P192",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 13.45,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P193",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 18.95,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P194",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "severe pulmonary hypertension (\u00a76.3.2)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P195",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": null,
+  "outcome": "LOW",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed"
+   ],
+   "must_not": []
+  }
+ },
+ {
+  "id": "P196",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "elevated-risk CHD (\u00a76.3.3, Table 11)"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 9.95,
+  "fc_branch": "modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P197",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [
+   "CIED"
+  ],
+  "rcri": 0,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 58.2,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P198",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [
+   "prior coronary stents/CABG"
+  ],
+  "rcri": 1,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 34.7,
+  "fc_branch": "modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ },
+ {
+  "id": "P199",
+  "timing": "elective",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": true,
+   "cerebrovascular_disease": false,
+   "history_of_hf": false,
+   "insulin_for_diabetes": false,
+   "creatinine_ge_2": true,
+   "high_risk_procedure": false
+  },
+  "dasi": 4.5,
+  "fc_branch": "no_modifier",
+  "outcome": "NO_IMPACT",
+  "content": {
+   "cor": null,
+   "must": [
+    "proceed",
+    "deferral",
+    "palliation"
+   ],
+   "must_not": [
+    "troponin"
+   ]
+  }
+ },
+ {
+  "id": "P200",
+  "timing": "time-sensitive",
+  "frail_score": 0,
+  "modifiers": [],
+  "rcri": 2,
+  "rcri_points": {
+   "ischemic_heart_disease": false,
+   "cerebrovascular_disease": false,
+   "history_of_hf": true,
+   "insulin_for_diabetes": true,
+   "creatinine_ge_2": false,
+   "high_risk_procedure": false
+  },
+  "dasi": 42.7,
+  "fc_branch": "no_modifier",
+  "outcome": "ADEQ",
+  "content": {
+   "cor": "2a",
+   "must": [
+    "proceed"
+   ],
+   "must_not": [
+    "obtain a baseline ecg"
+   ]
+  }
+ }
+]
