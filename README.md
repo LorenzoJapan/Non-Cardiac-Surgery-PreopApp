@@ -48,6 +48,14 @@ The 2026 edition is a surveillance reaffirmation of the 2024 guideline
 (doi:[10.1016/j.jacc.2024.06.013](https://doi.org/10.1016/j.jacc.2024.06.013)); its
 recommendations, figures, and tables are unchanged.
 
+RCRI criteria: Lee TH, Marcantonio ER, Mangione CM, et al. Derivation and prospective validation of a
+simple index for prediction of cardiac risk of major noncardiac surgery. *Circulation.* 1999;100(10):1043-9.
+doi:[10.1161/01.CIR.100.10.1043](https://doi.org/10.1161/01.CIR.100.10.1043) (criteria as worded in guideline Table 4)
+
+RCRI risk estimates: Duceppe E, Parlow J, MacDonald P, et al. Canadian Cardiovascular Society guidelines on
+perioperative cardiac risk assessment and management for patients who undergo noncardiac surgery.
+*Can J Cardiol.* 2017;33(1):17-32. doi:[10.1016/j.cjca.2016.09.008](https://doi.org/10.1016/j.cjca.2016.09.008)
+
 ## Disclaimer
 
 Clinical **decision support** for informational/educational use only. Not a validated or

@@ -558,7 +558,7 @@ function openCalc(kind){
   const list=document.getElementById('sheet-list');
   if(kind==='rcri'){
     document.getElementById('sheet-title').textContent='RCRI';
-    document.getElementById('sheet-lead').textContent='One point each. Elevated = RCRI > 1.';
+    document.getElementById('sheet-lead').textContent='One point each. Elevated = RCRI > 1. Index: Lee 1999 (criteria as worded in guideline Table 4) · % risk: Duceppe 2017 (CCS).';
     list.innerHTML=RCRI.map((it,i)=>`<div class="chk ${rcriS[i]?'on':''}" onclick="tog(${i})"><div class="box">${CHECK}</div><div class="lbl">${it.t}</div></div>`).join('');
   } else if(kind==='frail'){
     document.getElementById('sheet-title').textContent='FRAIL Scale';
@@ -661,6 +661,16 @@ function renderRefTab(){
       <p style="font-size:12px;margin:8px 0 0"><a href="https://doi.org/10.1016/j.jacc.2026.06.017" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.jacc.2026.06.017</a></p>
       <p style="font-size:11px;color:var(--muted);margin:8px 0 0">The 2026 edition reaffirms the 2024 guideline (doi:10.1016/j.jacc.2024.06.013); recommendations, figures, and tables are unchanged.</p>
       <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Section references (§) throughout this app point to sections of this guideline. Frailty tool from Table 6, §3.3.</p>
+      <p style="font-size:12px;font-weight:700;color:var(--ink);margin:14px 0 0">RCRI sources</p>
+      <p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:6px 0 0">
+      Lee TH, Marcantonio ER, Mangione CM, Thomas EJ, Polanczyk CA, Cook EF, et al. Derivation and prospective validation of a simple
+      index for prediction of cardiac risk of major noncardiac surgery. <i>Circulation.</i> 1999;100(10):1043-9.
+      <a href="https://doi.org/10.1161/01.CIR.100.10.1043" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1161/01.CIR.100.10.1043</a></p>
+      <p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:8px 0 0">
+      Duceppe E, Parlow J, MacDonald P, Lyons K, McMullen M, Srinathan S, et al. Canadian Cardiovascular Society guidelines on
+      perioperative cardiac risk assessment and management for patients who undergo noncardiac surgery. <i>Can J Cardiol.</i>
+      2017;33(1):17-32. <a href="https://doi.org/10.1016/j.cjca.2016.09.008" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.cjca.2016.09.008</a></p>
+      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">RCRI criteria from Lee 1999, as worded in guideline Table 4. Risk estimates for RCRI 0 / 1 / 2 / ≥ 3 (3.9%, 6.0%, 10.1%, 15%) from Duceppe 2017.</p>
       <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Developed by MDGadgetz LLC.</p></div>`;
   document.getElementById('v-ref').innerHTML=`<div class="eyebrow2">Perioperative medication timing · §7</div><div class="card" style="padding:4px 15px">${meds}</div><div class="eyebrow2">Comorbidity cards · §6</div>${com}${cite}`;
 }
