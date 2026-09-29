@@ -34,8 +34,8 @@ app publicly accessible; the in‑app disclaimer applies.*
 
 Eight‑step assessment matching guideline Figure 1: cardiovascular risk factors/disease/symptoms →
 surgical urgency → acute cardiac condition → risk modifiers → RCRI‑gated MACE risk → DASI‑gated
-functional capacity → will further testing impact care → biomarkers. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; a
-reference tab (medication timing, comorbidity cards, source citation); dark mode; larger‑text
+functional capacity → will further testing impact care → biomarkers. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; an
+About tab (scope, limits, privacy, medication timing, comorbidity notes, references); dark mode; larger‑text
 toggle; WCAG‑AA contrast.
 
 ## Source

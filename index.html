@@ -47,7 +47,7 @@
   .mono{font-family:var(--mono2);font-variant-numeric:tabular-nums}
 
   /* iPhone 17 Pro: 402 x 874 CSS pt */
-  .phone{width:402px;height:874px;background:var(--bg);border-radius:46px;flex:none;
+  .phone{color:var(--ink);width:402px;height:874px;background:var(--bg);border-radius:46px;flex:none;
     box-shadow:0 30px 70px rgba(16,38,45,.30),0 0 0 11px #0C1417,0 0 0 13px #223033;
     overflow:hidden;position:relative;display:flex;flex-direction:column;transform-origin:center center;
     font-variant-numeric:tabular-nums}
@@ -235,6 +235,26 @@
   .medrow .pill{font-size:10.5px;font-weight:800;padding:2px 8px;border-radius:6px}
   .pill.hold{background:var(--cor2abg);color:var(--cor2a)}.pill.cont{background:var(--cor1bg);color:var(--cor1)}.pill.indv{background:#EAEFF3;color:var(--muted)}
   .medrow .tm{flex:1.1;font-size:11.5px;color:var(--muted)}
+  .about-head{margin:2px 2px 14px}.about-head h2{font-size:21px;letter-spacing:-.01em}
+  .about-head p{font-size:13px;color:var(--muted);margin-top:3px}
+  .about-list{margin:0;padding-left:18px}.about-list li{font-size:12.5px;line-height:1.5;color:var(--ink);margin:0 0 6px}
+  .about-list li:last-child{margin-bottom:0}
+  .about-p{font-size:12.5px;line-height:1.5;color:var(--ink);margin:0 0 8px}.about-p:last-child{margin-bottom:0}
+  .about-note{font-size:11px;line-height:1.45;color:var(--muted);margin:8px 0 0}
+  .about-cite{font-size:12.5px;line-height:1.5;color:var(--ink);margin:0 0 10px}
+  .about-cite a{color:var(--teal);font-weight:700;text-decoration:none;overflow-wrap:anywhere}
+  .about-foot{text-align:center;font-size:11.5px;color:var(--muted);line-height:1.6;margin:6px 0 4px}
+  .ico{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}
+  .ov-ico{color:var(--teal);width:19px;height:19px}
+  .rico{color:var(--teal);align-self:center}
+  .result h2{display:flex;align-items:center;gap:9px}.result h2 .vico{width:24px;height:24px;stroke-width:2.2}
+  .eyebrow2 .eico{width:14px;height:14px;vertical-align:-2.5px;margin-right:6px}
+  .refcard .cico{color:var(--teal)}
+  .medrow .pill{white-space:nowrap;display:inline-flex;align-items:center;gap:3px}
+  .medrow .pill .pico{width:11px;height:11px;stroke-width:3}
+  .calcbtn{display:inline-flex;align-items:center;justify-content:center;gap:7px}
+  .phone.dark .tab.active{color:var(--teal)}
+  .phone.dark .pill.indv{background:#243440;color:#B7C8D1}
   .refcard{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:13px 15px;margin-bottom:10px}
   .refcard .rt{display:flex;align-items:center;gap:8px;margin-bottom:5px}.refcard h3{font-size:14px}
   .refcard .badge2{margin-left:auto;font-size:10px;color:var(--muted)}.refcard p{font-size:12px;color:var(--muted);line-height:1.45}
@@ -295,7 +315,7 @@
     <button class="tab" data-tab="calc" onclick="go('calc')">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="2" width="16" height="20" rx="2"/><line x1="8" y1="6" x2="16" y2="6"/></svg><span class="tl">Calculators</span></button>
     <button class="tab" data-tab="ref" onclick="go('ref')">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h11a3 3 0 013 3v13a2 2 0 00-2-2H4z"/><path d="M20 4h-1a3 3 0 00-3 3v13"/></svg><span class="tl">Reference</span></button>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 7.5v.01"/></svg><span class="tl">About</span></button>
   </nav>
   <div class="homebar"></div>
 
@@ -329,6 +349,43 @@ const RESULTS={
 };
 const REFMEDS=[["Statins","Continue","cont","Perioperative period"],["ACEi / ARB","Individualize","indv","HTN, elevated-risk surgery: omit 24 h before (2b) · HFrEF: continue (2a)"],["Beta blockers","Continue","cont","Don't start acutely"],["SGLT2 inhibitors","Hold","hold","3–4 days before"],["DAPT / stents","Individualize","indv","Elective NCS after DES: ≥ 6 mo (CCD) · ≥ 12 mo (ACS)"],["Anticoagulants","Individualize","indv","Bridge only highest risk"]];
 const COMORB=[["Coronary artery disease","§6.1","Optimize ASCVD therapy. ACS defers surgery; routine revascularization not indicated for non–left-main disease."],["Hypertension / BP","§6.2","Optimize poorly controlled HTN before elevated-risk surgery. Don't cancel for mild–moderate elevation alone. If ≥ 180/110 mm Hg + elevated-risk surgery + RCRI factors → consider deferral to optimize BP. If < 180/110 mm Hg and no RCRI factors → hypertension alone is generally not a reason to cancel."],["Heart failure","§6.3","Assess volume status & LV function. Hold SGLT2i 3–4 d pre-op; continue GDMT where appropriate."],["Valvular disease","§6.4","Severe symptomatic disease may warrant intervention before elevated-risk elective surgery."],["Atrial fibrillation","§6.5","Rate/rhythm & anticoagulation planning. New perioperative AF needs close follow-up."],["CIED (PPM/ICD)","§6.6","Device plan: interrogation & reprogramming per procedure and EMI risk."],["Prior stroke / TIA","§6.7","Delay elective surgery ≥ 3 months after recent stroke where feasible."],["Obstructive sleep apnea","§6.8","Screen and plan perioperative airway/monitoring; continue PAP therapy."]];
+const IC={
+  heartPulse:'<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/><path d="M3.2 12h6.3l.5-1 2 4.5 2-7 1.5 3.5h5.3"/>',
+  clock:'<circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>',
+  octagon:'<path d="M7.9 2h8.2L22 7.9v8.2L16.1 22H7.9L2 16.1V7.9Z"/><path d="M12 8v4"/><path d="M12 16h.01"/>',
+  flag:'<path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1Z"/><path d="M4 22v-7"/>',
+  gauge:'<path d="m12 14 4-4"/><path d="M3.3 19a10 10 0 1 1 17.4 0"/>',
+  stairs:'<path d="M3 20h5v-5h5v-5h5V5h3"/>',
+  search:'<circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/>',
+  tube:'<path d="M14.5 2v17.5a2.5 2.5 0 0 1-5 0V2"/><path d="M8.5 2h7"/><path d="M14.5 16h-5"/>',
+  checkCircle:'<circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/>',
+  pauseCircle:'<circle cx="12" cy="12" r="10"/><path d="M10 15V9"/><path d="M14 15V9"/>',
+  split:'<path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M12 22v-8.3a4 4 0 0 0-1.2-2.9L3 3"/><path d="m15 9 6-6"/>',
+  users:'<path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.9"/><path d="M16 3.1a4 4 0 0 1 0 7.8"/>',
+  person:'<circle cx="12" cy="5" r="1.5"/><path d="m9 20 3-6 3 6"/><path d="m6 8 6 2 6-2"/><path d="M12 10v4"/>',
+  slashCircle:'<circle cx="12" cy="12" r="10"/><path d="m4.9 4.9 14.2 14.2"/>',
+  cap:'<path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c3 2.7 9 2.7 12 0v-5"/>',
+  shield:'<path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10Z"/><path d="m9 12 2 2 4-4"/>',
+  pill:'<path d="m10.5 20.5 10-10a5 5 0 1 0-7-7l-10 10a5 5 0 1 0 7 7Z"/><path d="m8.5 8.5 7 7"/>',
+  steth:'<path d="M5 3H4a2 2 0 0 0-2 2v4a6 6 0 0 0 12 0V5a2 2 0 0 0-2-2h-1"/><path d="M8 15a6 6 0 0 0 12 0v-3"/><circle cx="20" cy="10" r="2"/>',
+  book:'<path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/>',
+  heart:'<path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/>',
+  droplet:'<path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5S12.5 5.5 12 3c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7Z"/>',
+  flow:'<path d="m16 3 4 4-4 4"/><path d="M20 7H4"/><path d="m8 21-4-4 4-4"/><path d="M4 17h16"/>',
+  ecg:'<path d="M22 12h-4l-3 9L9 3l-3 9H2"/>',
+  zap:'<path d="M13 2 3 14h9l-1 8 10-12h-9l1-8Z"/>',
+  brain:'<path d="M12 5a3 3 0 1 0-6 .1 4 4 0 0 0-2.5 5.8 4 4 0 0 0 .6 6.6A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 6 .1 4 4 0 0 1 2.5 5.8 4 4 0 0 1-.6 6.6A4 4 0 1 1 12 18Z"/><path d="M12 5v13"/>',
+  moon:'<path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>',
+  check:'<path d="M20 6 9 17l-5-5"/>',
+  pause:'<path d="M9 5v14"/><path d="M15 5v14"/>',
+  sliders:'<path d="M4 21v-7"/><path d="M4 10V3"/><path d="M12 21v-9"/><path d="M12 8V3"/><path d="M20 21v-5"/><path d="M20 12V3"/><path d="M2 14h4"/><path d="M10 8h4"/><path d="M18 16h4"/>',
+};
+const ico=(n,c='')=>`<svg class="ico ${c}" viewBox="0 0 24 24" aria-hidden="true">${IC[n]}</svg>`;
+const STEP_ICON={cvrisk:'heartPulse',urgency:'clock',acute:'octagon',modifiers:'flag',risk:'gauge',func:'stairs',test:'search',biomarkers:'tube'};
+const RESULT_ICON={NO_RISK:'checkCircle',EMERGENT:'checkCircle',LOW:'checkCircle',ADEQ:'checkCircle',BIOMARKER_OK:'checkCircle',
+  ACS_DEFER:'pauseCircle',NO_IMPACT:'split',BIOMARKER_HIGH:'users'};
+const COMORB_ICON=['heart','gauge','droplet','flow','ecg','zap','brain','moon'];
+const PILL_ICON={cont:'check',hold:'pause',indv:'sliders'};
 const CHECK='<svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="#fff" stroke-width="2.6"><path d="M2 7.5l3 3 7-7"/></svg>';
 const PENCIL='<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/></svg>';
 const COPY='<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>';
@@ -400,7 +457,7 @@ function activeRowHTML(r){
     }).join('');
     const any=st.some(Boolean);
     return `<div class="row active">
-      <div class="rlabel"><span class="rnum">${r.n}</span><span class="rtitle">${r.title}</span></div>
+      <div class="rlabel"><span class="rnum">${r.n}</span>${ico(STEP_ICON[r.key],'rico')}<span class="rtitle">${r.title}</span></div>
       <div class="qlist">${items}</div>
       <button class="qcontinue ${any?'warn':''}" onclick="confirmCond('${r.key}')">${any?'Continue — present':'Continue — none present'}</button>
     </div>`;
@@ -419,7 +476,7 @@ function activeRowHTML(r){
     return `<button class="${sel} ${o.free?'free':''}" onclick="answer('${r.key}',${oi})"><span>${o.l}</span>${o.tl?`<span class="tl">${o.tl}</span>`:''}</button>`;
   }).join('');
   return `<div class="row active ${r.key==='risk'?'riskrow':''} ${r.mini?'calcrow':''}">
-    <div class="rlabel"><span class="rnum">${r.n}</span><span class="rtitle">${r.title}</span>${mini}</div>
+    <div class="rlabel"><span class="rnum">${r.n}</span>${ico(STEP_ICON[r.key],'rico')}<span class="rtitle">${r.title}</span>${mini}</div>
     ${hint}<div class="seg">${segs}</div></div>`;
 }
 function togCond(key,i){
@@ -451,7 +508,7 @@ function renderProgress(activeIdx, terminal){
 }
 function renderRows(){
   if(!started){
-    const items=ROWS.map(r=>`<div class="ov-item"><span class="ov-num">${r.n}</span><span class="ov-title">${r.title}</span></div>`).join('');
+    const items=ROWS.map(r=>`<div class="ov-item"><span class="ov-num">${r.n}</span>${ico(STEP_ICON[r.key],'ov-ico')}<span class="ov-title">${r.title}</span></div>`).join('');
     document.getElementById('rows').innerHTML=
       `<div class="ov-card"><div class="ov-head">Assessment steps</div>${items}</div>
        <button class="ov-begin" onclick="startAssessment()">Begin patient assessment →</button>`;
@@ -498,7 +555,7 @@ function renderResult(term){
   el.className='result '+(r.cor?'cor'+r.cor.replace(/[^0-9ab]/g,''):'corn');
   const corLbl = r.cor ? `COR ${r.cor} · ${r.sec}` : r.sec;
   rtop.style.display='none';
-  rt('rtitle').style.display=''; rt('rtitle').innerHTML = r.corEnd ? r.t : `<span class="badge" style="margin-right:8px">${corLbl}</span>${r.t}`;
+  rt('rtitle').style.display=''; rt('rtitle').innerHTML = r.corEnd ? ico(RESULT_ICON[term],'vico')+`<span>${r.t}</span>` : `<span class="badge" style="margin-right:8px">${corLbl}</span>${r.t}`;
   rt('rtext').style.display=''; rt('rtext').textContent=r.p;
   const corTag = r.corEnd ? `  ·  <span style="opacity:.8;font-weight:700">${corLbl}</span>` : '';
   if(r.note){ rt('rnote').style.display=''; rt('rnote').innerHTML=r.note+corTag; }
@@ -635,9 +692,10 @@ function renderCalcTab(){
   const rcriLast=calcLast.rcri?`RCRI ${calcLast.rcri.score} · ~${calcLast.rcri.mace}% MACE`:'';
   const dasiLast=calcLast.dasi?`DASI ${calcLast.dasi.sum.toFixed(1)} · ~${calcLast.dasi.mets.toFixed(1)} METs`:'';
   const fN=calcLast.frail; const frailLast=(fN!=null)?`${fN}/5 · ${fN>=3?'Frail':fN>=1?'Prefrail':'Nonfrail'}`:'';
+  const CALC_ICON={rcri:'gauge',dasi:'stairs',frail:'person'};
   const calc=(kind,label,when,last,bg)=>`
     <div class="calcrow2">
-      <button class="apply" style="margin:0;background:${bg};min-width:118px" onclick="openCalc('${kind}')">${label}</button>
+      <button class="apply calcbtn" style="margin:0;background:${bg};min-width:118px" onclick="openCalc('${kind}')">${ico(CALC_ICON[kind])}${label}</button>
       <div class="calcmeta"><div class="calcwhen">${when}</div>${last?`<div class="calclast">Last: ${last}</div>`:''}</div>
     </div>`;
   document.getElementById('v-calc').innerHTML=`
@@ -650,29 +708,66 @@ function renderCalcTab(){
       </div></div>`;
 }
 function renderRefTab(){
-  const meds=REFMEDS.map(m=>`<div class="medrow"><div class="drug">${m[0]}</div><div class="act"><span class="pill ${m[2]}">${m[1]}</span></div><div class="tm">${m[3]}</div></div>`).join('');
-  const com=COMORB.map(c=>`<div class="refcard"><div class="rt"><h3>${c[0]}</h3><span class="badge2">${c[1]}</span></div><p>${c[2]}</p></div>`).join('');
-  const cite=`<div class="eyebrow2">Source</div>
-    <div class="card"><p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:0">
-      Thompson A, Fleischmann KE, Smilowitz NR, et al. 2026 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for
+  const meds=REFMEDS.map(m=>`<div class="medrow"><div class="drug">${m[0]}</div><div class="act"><span class="pill ${m[2]}">${ico(PILL_ICON[m[2]],'pico')}${m[1]}</span></div><div class="tm">${m[3]}</div></div>`).join('');
+  const com=COMORB.map((c,i)=>`<div class="refcard"><div class="rt">${ico(COMORB_ICON[i],'cico')}<h3>${c[0]}</h3><span class="badge2">${c[1]}</span></div><p>${c[2]}</p></div>`).join('');
+  document.getElementById('v-ref').innerHTML=`
+    <div class="about-head"><h2>About</h2><p>What this app is based on, and what it is not.</p></div>
+
+    <div class="eyebrow2">${ico('checkCircle','eico')}What the app covers</div>
+    <div class="card"><ul class="about-list">
+      <li>Adults (≥ 18 years) being considered for noncardiac surgery (§1.4).</li>
+      <li>The stepwise preoperative cardiac assessment of guideline Figure 1: CV risk, surgical urgency, acute cardiac conditions, risk modifiers, calculated risk, functional capacity, need for further testing, and biomarkers.</li>
+      <li>Built-in calculators: RCRI (Table 4), DASI (Table 5) and FRAIL (Table 6).</li>
+      <li>A recommendation with its Class of Recommendation and guideline section, plus a chart-ready summary.</li>
+      <li>Quick reference: perioperative medication timing (§7) and comorbidity notes (§6).</li>
+    </ul></div>
+
+    <div class="eyebrow2">${ico('slashCircle','eico')}What it does not cover</div>
+    <div class="card"><ul class="about-list">
+      <li>Cardiac surgery, or patients under 18.</li>
+      <li>Choosing or interpreting a specific stress test or imaging modality.</li>
+      <li>Detailed antiplatelet and anticoagulant interruption or bridging protocols (see guideline Tables 13–14).</li>
+      <li>Intraoperative and postoperative management beyond troponin surveillance.</li>
+      <li>Noncardiac perioperative risk (e.g., pulmonary, bleeding, delirium).</li>
+    </ul></div>
+
+    <div class="eyebrow2">${ico('cap','eico')}Clinical educational tool</div>
+    <div class="card">
+      <p class="about-p">For use by clinicians (physicians, advanced practice providers, and anesthesia and surgical teams) as an educational aid that summarizes the 2026 AHA/ACC perioperative guideline. It does not replace clinical judgment or cardiology, anesthesiology or surgical consultation; the guideline emphasizes team-based, multidisciplinary decisions. Risk is dynamic — reassess if the patient's condition or the surgical plan changes. Not a validated or regulatory-cleared medical device.</p>
+      <p class="about-note">Guideline content © 2026 American Heart Association, Inc., and American College of Cardiology Foundation. Modification or distribution of guideline content, including within software, requires express permission from the American College of Cardiology.</p>
+    </div>
+
+    <div class="eyebrow2">${ico('shield','eico')}Privacy</div>
+    <div class="card"><ul class="about-list">
+      <li>No protected health information (PHI). The app has no text fields and never asks for names, record numbers or other patient identifiers.</li>
+      <li>Answers stay on this device, are not saved, and clear when you tap Reset or close the app.</li>
+      <li>Nothing you enter is sent over the internet — no accounts, tracking or analytics. The app is downloaded from its web host; after that, everything runs on your device.</li>
+      <li>Copy Preop Clearance Summary places text only on this device's clipboard.</li>
+      <li>Designed for HIPAA-conscious use.</li>
+    </ul></div>
+
+    <div class="eyebrow2">${ico('pill','eico')}Perioperative medication timing · §7</div>
+    <div class="card" style="padding:4px 15px">${meds}</div>
+    <div class="eyebrow2">${ico('steth','eico')}Comorbidity notes · §6</div>
+    ${com}
+
+    <div class="eyebrow2">${ico('book','eico')}References</div>
+    <div class="card">
+      <p class="about-cite">Thompson A, Fleischmann KE, Smilowitz NR, et al. 2026 AHA/ACC/ACS/ASNC/HRS/SCA/SCCT/SCMR/SVM Guideline for
       Perioperative Cardiovascular Management for Noncardiac Surgery: A Report of the American College of Cardiology/
-      American Heart Association Joint Committee on Clinical Practice Guidelines.
-      <i>J Am Coll Cardiol.</i> 2026;88(13):1543-1643.</p>
-      <p style="font-size:12px;margin:8px 0 0"><a href="https://doi.org/10.1016/j.jacc.2026.06.017" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.jacc.2026.06.017</a></p>
-      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">The 2026 edition reaffirms the 2024 guideline (doi:10.1016/j.jacc.2024.06.013); recommendations, figures, and tables are unchanged.</p>
-      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Section references (§) throughout this app point to sections of this guideline. Frailty tool from Table 6, §3.3.</p>
-      <p style="font-size:12px;font-weight:700;color:var(--ink);margin:14px 0 0">RCRI sources</p>
-      <p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:6px 0 0">
-      Lee TH, Marcantonio ER, Mangione CM, Thomas EJ, Polanczyk CA, Cook EF, et al. Derivation and prospective validation of a simple
+      American Heart Association Joint Committee on Clinical Practice Guidelines. <i>J Am Coll Cardiol.</i> 2026;88(13):1543-1643.
+      <a href="https://doi.org/10.1016/j.jacc.2026.06.017" target="_blank">doi:10.1016/j.jacc.2026.06.017</a></p>
+      <p class="about-cite">Lee TH, Marcantonio ER, Mangione CM, Thomas EJ, Polanczyk CA, Cook EF, et al. Derivation and prospective validation of a simple
       index for prediction of cardiac risk of major noncardiac surgery. <i>Circulation.</i> 1999;100(10):1043-9.
-      <a href="https://doi.org/10.1161/01.CIR.100.10.1043" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1161/01.CIR.100.10.1043</a></p>
-      <p style="font-size:12.5px;line-height:1.5;color:var(--ink);margin:8px 0 0">
-      Duceppe E, Parlow J, MacDonald P, Lyons K, McMullen M, Srinathan S, et al. Canadian Cardiovascular Society guidelines on
+      <a href="https://doi.org/10.1161/01.CIR.100.10.1043" target="_blank">doi:10.1161/01.CIR.100.10.1043</a></p>
+      <p class="about-cite">Duceppe E, Parlow J, MacDonald P, Lyons K, McMullen M, Srinathan S, et al. Canadian Cardiovascular Society guidelines on
       perioperative cardiac risk assessment and management for patients who undergo noncardiac surgery. <i>Can J Cardiol.</i>
-      2017;33(1):17-32. <a href="https://doi.org/10.1016/j.cjca.2016.09.008" target="_blank" style="color:var(--teal);font-weight:700;text-decoration:none">doi:10.1016/j.cjca.2016.09.008</a></p>
-      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">RCRI criteria from Lee 1999, as worded in guideline Table 4. Risk estimates for RCRI 0 / 1 / 2 / ≥ 3 (3.9%, 6.0%, 10.1%, 15%) from Duceppe 2017.</p>
-      <p style="font-size:11px;color:var(--muted);margin:8px 0 0">Developed by MDGadgetz LLC.</p></div>`;
-  document.getElementById('v-ref').innerHTML=`<div class="eyebrow2">Perioperative medication timing · §7</div><div class="card" style="padding:4px 15px">${meds}</div><div class="eyebrow2">Comorbidity cards · §6</div>${com}${cite}`;
+      2017;33(1):17-32. <a href="https://doi.org/10.1016/j.cjca.2016.09.008" target="_blank">doi:10.1016/j.cjca.2016.09.008</a></p>
+      <p class="about-note">The 2026 edition reaffirms the 2024 guideline (doi:10.1016/j.jacc.2024.06.013); recommendations, figures, and tables are unchanged. Section references (§) throughout this app point to this guideline.</p>
+      <p class="about-note">RCRI criteria from Lee 1999, as worded in guideline Table 4. Risk estimates for RCRI 0 / 1 / 2 / ≥ 3 (3.9%, 6.0%, 10.1%, 15%) from Duceppe 2017.</p>
+    </div>
+
+    <div class="about-foot">Developed by MDGadgetz LLC<br>Preop Clearance · version 2.0 · September 2026</div>`;
 }
 
 renderRows(); renderCalcTab(); renderRefTab();
