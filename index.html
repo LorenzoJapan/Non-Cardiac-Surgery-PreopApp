@@ -126,7 +126,7 @@
   .progress .pdot.cur{background:var(--navy)}
   .progress .plabel{font-size:11px;font-weight:700;color:var(--muted);flex:none;margin-left:4px;white-space:nowrap}
   .ov-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:4px 4px 8px;margin-bottom:12px}
-  .ov-head{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.06em;color:var(--teal);padding:11px 13px 4px}
+  .ov-item:first-child{border-top:none}
   .ov-item{display:flex;align-items:center;gap:12px;padding:7px 13px;border-top:1px solid var(--line2)}
   .ov-num{width:23px;height:23px;border-radius:7px;background:var(--navy);color:#fff;font-size:12px;font-weight:700;display:inline-flex;align-items:center;justify-content:center;flex:none}
   .ov-title{font-size:15px;font-weight:600;color:var(--ink)}
@@ -513,7 +513,7 @@ function renderRows(){
   if(!started){
     const items=ROWS.map(r=>`<div class="ov-item"><span class="ov-num">${r.n}</span>${ico(STEP_ICON[r.key],'ov-ico')}<span class="ov-title">${r.title}</span></div>`).join('');
     document.getElementById('rows').innerHTML=
-      `<div class="ov-card"><div class="ov-head">Assessment steps</div>${items}</div>
+      `<div class="ov-card">${items}</div>
        <button class="ov-begin" onclick="startAssessment()">Begin patient assessment →</button>`;
     renderResult(null); renderProgress(0,null);
     document.getElementById('rprompt').textContent='Preoperative cardiac clearance · '+ROWS.length+' steps';
