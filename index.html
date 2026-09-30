@@ -109,6 +109,8 @@
 
   /* decision rows */
   .rows{flex:1;display:flex;flex-direction:column;gap:9px;min-height:0;overflow:hidden;justify-content:flex-start}
+  .rows.ov .ov-card{flex:0 1 auto;min-height:0;overflow-y:auto}   /* first screen: step list scrolls, Begin stays visible */
+  .rows.ov .ov-begin{flex:none}
   .row{display:flex;flex-direction:column;flex:none}
   .row.active{animation:qfade .32s ease}
   @keyframes qfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
@@ -507,6 +509,7 @@ function renderProgress(activeIdx, terminal){
   el.innerHTML = dots + `<span class="plabel">${terminal?'Result':'Step '+(activeIdx+1)+' of '+ROWS.length}</span>`;
 }
 function renderRows(){
+  document.getElementById('rows').classList.toggle('ov',!started);
   if(!started){
     const items=ROWS.map(r=>`<div class="ov-item"><span class="ov-num">${r.n}</span>${ico(STEP_ICON[r.key],'ov-ico')}<span class="ov-title">${r.title}</span></div>`).join('');
     document.getElementById('rows').innerHTML=
