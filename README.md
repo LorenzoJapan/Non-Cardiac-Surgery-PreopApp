@@ -45,6 +45,15 @@ antiplatelet plan is unknown, the headline is "Hold — confirm antiplatelet pla
 About tab (scope, limits, privacy, medication timing, comorbidity notes, references); dark mode; larger‑text
 toggle; WCAG‑AA contrast.
 
+## Privacy
+
+The app collects no PHI: there are no text fields, and answers live only in memory until Reset or the page is
+closed. It uses no storage (local/session storage, cookies, IndexedDB, caches, service workers), no network
+calls, no external scripts or fonts, and no analytics. A `Content-Security-Policy` meta tag in `index.html`
+(`default-src 'none'; connect-src 'none'; form-action 'none'`, inline code and `data:` icons only) makes the
+browser block any request even if a future edit tried to send data. `validation/privacy_test.js` checks all of
+this and fails if the app ever calls a network or storage API. On GitHub Pages, keep **Enforce HTTPS** on.
+
 ## Validation
 
 The `validation/` folder holds a black‑box test suite. `oracle.py` encodes Figure 1 and the §7.5 stent rules
@@ -69,6 +78,8 @@ npm i jsdom
 python3 generate_cohort.py && python3 oracle.py && node run_app.js && python3 compare.py
 # step 4 stent-question gate (UI check)
 node gate_test.js
+# privacy: CSP present, no fields, no network/storage calls during a full assessment
+node privacy_test.js
 # combined 440
 python3 generate_cohort_random.py && python3 generate_cohort_stent.py
 python3 -c "import json;a=sum((json.load(open(f)) for f in ['cohort_200.json','cohort_random_200.json','cohort_stent_40.json']),[]);json.dump(a,open('cohort_440.json','w'),indent=1)"

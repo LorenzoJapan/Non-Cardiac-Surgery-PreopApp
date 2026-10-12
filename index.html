@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
+<!-- Privacy safeguard: the browser blocks all network requests, external scripts/styles/fonts, forms and
+     plug-ins. Only this file's own inline code and data: icons may run, so no entered answer can leave the device. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Preop Clearance</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -873,6 +876,7 @@ function renderRefTab(){
       <li>Answers stay on this device, are not saved, and clear when you tap Reset or close the app.</li>
       <li>Nothing you enter is sent over the internet — no accounts, tracking or analytics. The app is downloaded from its web host; after that, everything runs on your device.</li>
       <li>Copy Preop Clearance Summary places text only on this device's clipboard.</li>
+      <li>A built-in security policy (Content-Security-Policy) tells the browser to block any network connection, external code, or form submission from this page.</li>
       <li>Designed for HIPAA-conscious use.</li>
     </ul></div>
 

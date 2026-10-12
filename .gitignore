@@ -1,0 +1,12 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# validation suite dependencies (npm i jsdom)
+node_modules/
+package-lock.json
+
+# python
+__pycache__/
