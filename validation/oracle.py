@@ -95,6 +95,9 @@ CONTENT = {
     "NO_IMPACT":      {"cor": None, "must": ["proceed", "deferral", "palliation"], "must_not": ["troponin"]},
     "BIOMARKER_OK":   {"cor": "2a", "must": ["proceed"], "must_not": ["24 and 48", "postoperative troponin"]},
     "BIOMARKER_HIGH": {"cor": "2b", "must": ["multidisciplinary", "echocardiography", "stress", "ccta", "24 and 48"], "must_not": []},
+    # §7.5 Defer/Delay is more restrictive than any Figure 1 outcome reached after step 4 -> it is the headline;
+    # the Figure 1 outcome is kept as "once stent timing allows" (checked separately as fig1_outcome)
+    "STENT_HOLD":     {"cor": "any", "must": ["stent timing", "once stent timing allows", "multidisciplinary"], "must_not": []},
 }
 
 
@@ -120,6 +123,13 @@ def stent_level(p, timing_):
 
 
 def evaluate(p):
+    r = evaluate_fig1(p)
+    if r.get("stent_level") in ("harm", "delay"):
+        r["fig1_outcome"], r["outcome"], r["content"] = r["outcome"], "STENT_HOLD", CONTENT["STENT_HOLD"]
+    return r
+
+
+def evaluate_fig1(p):
     r = {"id": p["id"], "timing": timing(p), "frail_score": frail_score(p), "modifiers": risk_modifiers(p),
          "rcri": rcri_table4(p)[0], "rcri_points": rcri_table4(p)[1], "dasi": dasi(p), "fc_branch": None}
     def done(outcome):

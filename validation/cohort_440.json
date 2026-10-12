@@ -935,7 +935,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 420,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,
@@ -1438,7 +1444,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
   },
   "acute": {
    "acs": null,
@@ -5079,7 +5091,13 @@
     "complexity": "complex"
    },
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 420,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,
@@ -5825,7 +5843,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 730,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,
@@ -6206,7 +6230,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
   },
   "acute": {
    "acs": null,
@@ -6435,7 +6465,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 730,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,
@@ -7081,7 +7117,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 420,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,
@@ -7974,7 +8016,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 420,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,
@@ -8271,7 +8319,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
   },
   "acute": {
    "acs": null,
@@ -8916,7 +8970,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
   },
   "acute": {
    "acs": null,
@@ -8971,7 +9031,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
   },
   "acute": {
    "acs": null,
@@ -9642,7 +9708,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
   },
   "acute": {
    "acs": null,
@@ -12473,7 +12545,13 @@
    "pulmonary_hypertension": null,
    "congenital_heart_disease": null,
    "atrial_fibrillation": null,
-   "peripheral_artery_disease": false
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 420,
+    "antiplatelet_interruption": "yes"
+   }
   },
   "acute": {
    "acs": null,

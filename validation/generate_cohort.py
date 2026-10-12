@@ -296,6 +296,22 @@ edge("rcri2_no_modifier_poor_no_impact", lambda p: (p["risk_factors"].update(hyp
 edge("compensated_hf_plus_insulin_elevated", lambda p: (p["risk_factors"].update(hypertension=True), comp_hf(p), comp_ins(p), set_surgery(p, "spine"), set_dasi(p, True)))
 
 assert len(cohort) == 200, len(cohort)
+# Structured stent details (needed since the app requires its §7.5 stent questions whenever prior stents/CABG
+# is ticked). Derived deterministically from the free-text history - no rng draws, so every other field and
+# patient is unchanged. These revascularizations are all >=14 months old, so the strictest assumptions
+# (DES for ACS, antiplatelet interruption planned) still give "no timing restriction".
+import re
+for p in cohort:
+    t = p["history"]["prior_pci_or_cabg"]
+    if not t:
+        continue
+    if t.startswith("CABG"):
+        p["history"]["pci"] = {"type": "CABG", "indication": None, "days_since": None, "antiplatelet_interruption": None}
+        continue
+    m = re.match(r"(DES|BMS)-PCI (\d+) (years?|months?) ago", t)
+    days = int(m.group(2)) * (365 if m.group(3).startswith("year") else 30)
+    p["history"]["pci"] = {"type": m.group(1), "indication": "ACS" if m.group(1) == "DES" else None,
+                           "days_since": days, "antiplatelet_interruption": "yes"}
 for p in cohort:  # every patient has a biomarker value available in case the pathway needs it
     b = p["biomarkers"]
     if b["bnp_ng_l"] is None and b["nt_probnp_ng_l"] is None:

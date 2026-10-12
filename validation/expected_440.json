@@ -2107,7 +2107,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2430,7 +2430,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2617,7 +2617,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2739,7 +2739,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3083,7 +3083,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3539,7 +3539,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3689,7 +3689,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -4030,7 +4030,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4062,7 +4062,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4405,7 +4405,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -5618,7 +5618,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -6240,17 +6240,17 @@
   "dasi": 19.7,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "BIOMARKER_OK",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "24 and 48",
-    "postoperative troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "BIOMARKER_OK"
  },
  {
   "id": "R021",
@@ -8633,18 +8633,17 @@
   "dasi": 28.7,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "R109",
@@ -8769,18 +8768,17 @@
   "dasi": 0,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "R114",
@@ -10815,16 +10813,17 @@
   "dasi": 37.45,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "R188",
@@ -11190,18 +11189,17 @@
   "dasi": 31.2,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "S002",
@@ -11222,16 +11220,17 @@
   "dasi": 36.7,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S003",
@@ -11252,18 +11251,17 @@
   "dasi": 0,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "S004",
@@ -11284,17 +11282,17 @@
   "dasi": 27.75,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "BIOMARKER_OK",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "24 and 48",
-    "postoperative troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "BIOMARKER_OK"
  },
  {
   "id": "S005",
@@ -11315,18 +11313,17 @@
   "dasi": 18.95,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "S006",
@@ -11347,18 +11344,17 @@
   "dasi": 0,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "S007",
@@ -11379,18 +11375,17 @@
   "dasi": 25.2,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "BIOMARKER_HIGH",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2b",
+   "cor": "any",
    "must": [
-    "multidisciplinary",
-    "echocardiography",
-    "stress",
-    "ccta",
-    "24 and 48"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
    "must_not": []
-  }
+  },
+  "fig1_outcome": "BIOMARKER_HIGH"
  },
  {
   "id": "S008",
@@ -11442,16 +11437,17 @@
   "dasi": 36.7,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S010",
@@ -11472,16 +11468,17 @@
   "dasi": 34.45,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S011",
@@ -11534,16 +11531,17 @@
   "dasi": 50.7,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S013",
@@ -11656,17 +11654,17 @@
   "dasi": 30.95,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "BIOMARKER_OK",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "24 and 48",
-    "postoperative troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "BIOMARKER_OK"
  },
  {
   "id": "S017",
@@ -11751,17 +11749,17 @@
   "dasi": 0,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "BIOMARKER_OK",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "24 and 48",
-    "postoperative troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "BIOMARKER_OK"
  },
  {
   "id": "S020",
@@ -11782,16 +11780,17 @@
   "dasi": 42.2,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S021",
@@ -11845,17 +11844,17 @@
   "dasi": 25.2,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "BIOMARKER_OK",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "24 and 48",
-    "postoperative troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "BIOMARKER_OK"
  },
  {
   "id": "S023",
@@ -11908,16 +11907,17 @@
   "dasi": 44.45,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S025",
@@ -11968,16 +11968,17 @@
   "dasi": 42.7,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S027",
@@ -12058,16 +12059,17 @@
   "dasi": 36.95,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S030",
@@ -12088,16 +12090,17 @@
   "dasi": 36.2,
   "fc_branch": "modifier",
   "stent_level": "harm",
-  "outcome": "ADEQ",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": "2a",
+   "cor": "any",
    "must": [
-    "proceed"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "obtain a baseline ecg"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "ADEQ"
  },
  {
   "id": "S031",
@@ -12180,18 +12183,17 @@
   "dasi": 31.7,
   "fc_branch": "modifier",
   "stent_level": "delay",
-  "outcome": "NO_IMPACT",
+  "outcome": "STENT_HOLD",
   "content": {
-   "cor": null,
+   "cor": "any",
    "must": [
-    "proceed",
-    "deferral",
-    "palliation"
+    "stent timing",
+    "once stent timing allows",
+    "multidisciplinary"
    ],
-   "must_not": [
-    "troponin"
-   ]
-  }
+   "must_not": []
+  },
+  "fig1_outcome": "NO_IMPACT"
  },
  {
   "id": "S034",

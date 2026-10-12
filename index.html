@@ -144,6 +144,7 @@
     font-size:15px;font-weight:700;font-family:inherit;cursor:pointer;transition:background .15s}
   .qcontinue:active{background:var(--navy-d)}
   .qcontinue.warn{background:var(--cor2a)}
+  .qcontinue:disabled{background:var(--muted);opacity:.6;cursor:not-allowed}
   .stentq{margin:4px 0 6px 32px;padding:10px 11px;border-radius:12px;background:var(--wash2);border:1px solid var(--line)}
   .stentq .sq{margin-bottom:8px}.stentq .sq:last-of-type{margin-bottom:6px}
   .stentq .sql{font-size:11.5px;font-weight:700;color:var(--muted);margin-bottom:4px;letter-spacing:.01em}
@@ -409,6 +410,14 @@ function stentAssess(){
   if(d.stop===2) return {lvl:r.lvl,t:'If ≥ 1 antiplatelet agent will be stopped — '+r.t+' If antiplatelets are continued, timing thresholds do not apply.'+tail};
   return {lvl:r.lvl,t:r.t+tail};
 }
+/* A Defer/Delay stent result is more restrictive than any Figure 1 "proceed" outcome, so it becomes the headline */
+function stentHold(){
+  if(!(ans.modifiers===0 && stentFlag())) return null;
+  const a=stentAssess();
+  if(!a || (a.lvl!=='harm' && a.lvl!=='delay')) return null;
+  const t = stentD.stop===2 ? 'Hold — confirm antiplatelet plan' : a.lvl==='harm' ? 'Defer surgery — recent stent' : 'Delay surgery — stent timing';
+  return {lvl:a.lvl, t, p:a.t};
+}
 function stentSummary(){
   const d=stentD; if(d.type===null) return '';
   if(d.type===3) return 'CABG only';
@@ -425,10 +434,20 @@ function stentPanelInner(){
                  : `<div class="stentflag pending">Answer the questions above to see §7.5 timing guidance.</div>`;
   return qs+flag;
 }
+/* Step 4 cannot be completed while prior stents/CABG is ticked and the stent questions are incomplete */
+const stentGate=()=>stentFlag() && !stentAssess();
+function syncContinue(){
+  const btn=document.querySelector('.row.active .qcontinue'); if(!btn || !document.getElementById('stentQ')) return;
+  const any=modS.some(Boolean), gate=stentGate();
+  btn.disabled=gate;
+  btn.textContent=gate?'Answer the stent questions to continue':(any?'Continue — present':'Continue — none present');
+  btn.classList.toggle('warn',any && !gate);
+}
 function setStent(k,i){
   stentD[k]=i;
   if(k==='type'){ if(i!==0) stentD.ind=null; if(i===3){ stentD.time=null; stentD.stop=null; } }
   const el=document.getElementById('stentQ'); if(el) el.innerHTML=stentPanelInner();
+  syncContinue();
 }
 const REFMEDS=[["Statins","Continue","cont","Perioperative period"],["ACEi / ARB","Individualize","indv","HTN, elevated-risk surgery: omit 24 h before (2b) · HFrEF: continue (2a)"],["Beta blockers","Continue","cont","Don't start acutely"],["SGLT2 inhibitors","Hold","hold","3–4 days before"],["DAPT / stents","Individualize","indv","Continue aspirin after PCI (1). If elective NCS requires stopping ≥1 antiplatelet: avoid ≤ 30 d after BMS or DES (harm) · balloon only ≥ 14 d (1) · DES for ACS ≥ 12 mo (1) · DES for Stable CAD ≥ 6 mo (2a) · time-sensitive after DES ≥ 3 mo (2b). Within 30 d BMS / < 3 mo DES and surgery can't wait: continue DAPT unless bleeding risk outweighs (1). Team decision (§7.5)"],["Anticoagulants","Individualize","indv","Bridge only highest risk"]];
 const COMORB=[["Coronary artery disease","§6.1","Optimize ASCVD therapy. ACS defers surgery; routine revascularization not indicated for non–left-main disease."],["Hypertension / BP","§6.2","Optimize poorly controlled HTN before elevated-risk surgery. Don't cancel for mild–moderate elevation alone. If ≥ 180/110 mm Hg + elevated-risk surgery + RCRI factors → consider deferral to optimize BP. If < 180/110 mm Hg and no RCRI factors → hypertension alone is generally not a reason to cancel."],["Heart failure","§6.3","Assess volume status & LV function. Hold SGLT2i 3–4 d pre-op; continue GDMT where appropriate."],["Valvular disease","§6.4","Severe symptomatic disease may warrant intervention before elevated-risk elective surgery."],["Atrial fibrillation","§6.5","Rate/rhythm & anticoagulation planning. New perioperative AF needs close follow-up."],["CIED (PPM/ICD)","§6.6","Device plan: interrogation & reprogramming per procedure and EMI risk."],["Prior stroke / TIA","§6.7","Delay elective surgery ≥ 3 months after recent stroke where feasible."],["Obstructive sleep apnea","§6.8","Screen and plan perioperative airway/monitoring; continue PAP therapy."]];
@@ -543,7 +562,8 @@ function activeRowHTML(r){
     return `<div class="row active">
       <div class="rlabel"><span class="rnum">${r.n}</span>${ico(STEP_ICON[r.key],'rico')}<span class="rtitle">${r.title}</span></div>
       <div class="qlist">${items}</div>
-      <button class="qcontinue ${any?'warn':''}" onclick="confirmCond('${r.key}')">${any?'Continue — present':'Continue — none present'}</button>
+      ${(()=>{ const gate=r.key==='modifiers' && stentGate();
+        return `<button class="qcontinue ${any&&!gate?'warn':''}" ${gate?'disabled':''} onclick="confirmCond('${r.key}')">${gate?'Answer the stent questions to continue':(any?'Continue — present':'Continue — none present')}</button>`; })()}
     </div>`;
   }
   const needCalc=r.mini && v===null;
@@ -567,12 +587,13 @@ function togCond(key,i){
   const st=key==='acute'?acuteS:modS; st[i]=!st[i];
   const items=document.querySelectorAll('.row.active .qchk');
   if(items[i]) items[i].classList.toggle('on',st[i]);
-  const sq=document.getElementById('stentQ'); if(sq && key==='modifiers') sq.style.display=stentFlag()?'':'none';
   const any=st.some(Boolean);
   const btn=document.querySelector('.row.active .qcontinue');
   if(btn){ btn.textContent=any?'Continue — present':'Continue — none present'; btn.classList.toggle('warn',any); }
+  const sq=document.getElementById('stentQ'); if(sq && key==='modifiers'){ sq.style.display=stentFlag()?'':'none'; syncContinue(); }
 }
 function confirmCond(key){
+  if(key==='modifiers' && stentGate()) return;
   const st=key==='acute'?acuteS:modS;
   answer(key, st.some(Boolean)?0:1);
 }
@@ -647,7 +668,15 @@ function renderResult(term){
   if(r.note){ rt('rnote').style.display=''; rt('rnote').innerHTML=r.note+corTag; }
   else if(r.corEnd){ rt('rnote').style.display=''; rt('rnote').innerHTML=`<span style="opacity:.8;font-weight:700">${corLbl}</span>`; }
   else rt('rnote').style.display='none';
-  const showStent = ans.modifiers===0 && stentFlag();
+  const hold=stentHold();
+  if(hold){
+    el.className='result '+(hold.lvl==='harm'?'cor3':'cor2b');
+    rt('rtitle').innerHTML = ico('pauseCircle','vico')+`<span>${hold.t}</span>`;
+    rt('rtext').textContent = `Stent timing (${stentSummary()}): ${hold.p}`;
+    rt('rnote').style.display='';
+    rt('rnote').innerHTML = `Cardiac risk assessment (Figure 1), once stent timing allows: <b class="fig1t">${r.t}</b> — <span class="fig1p">${r.p}</span>  ·  <span style="opacity:.8;font-weight:700">${corLbl}</span>`;
+  }
+  const showStent = !hold && ans.modifiers===0 && stentFlag();
   rt('rstent').style.display = showStent ? '' : 'none';
   const sa=stentAssess();
   rt('rstent').innerHTML = !showStent ? '' : sa ? `<b>Stent timing (${stentSummary()}) — ${LVL_LABEL[sa.lvl]}:</b> ${sa.t}` : '<b>Stent timing:</b> '+STENT_CAUTION;
@@ -671,9 +700,18 @@ function buildNote(term){
   if(ans.test!=null) L.push("• Further testing would impact decision-making/perioperative care: "+(ans.test===0?"No":"Yes"));
   if(ans.biomarkers!=null) L.push("• Biomarkers (BNP/NT-proBNP): "+(ans.biomarkers===0?"Normal":"Elevated"));
   L.push("");
+  const hold=stentHold();
+  if(hold){
+    L.push("RECOMMENDATION: "+hold.t+" (§7.5)");
+    L.push(`Stent timing (${stentSummary()}): ${hold.p}`);
+    L.push("");
+    L.push("Cardiac risk assessment (Figure 1), once stent timing allows: "+r.t+" ("+(r.cor?"COR "+r.cor+" · ":"")+r.sec+")");
+    L.push(r.corEnd? r.p.charAt(0).toUpperCase()+r.p.slice(1) : r.p);
+  } else {
   L.push("RECOMMENDATION: "+r.t+" ("+(r.cor?"COR "+r.cor+" · ":"")+r.sec+")");
   L.push(r.corEnd? r.p.charAt(0).toUpperCase()+r.p.slice(1) : r.p);
-  if(ans.modifiers===0 && stentFlag()){ const sa=stentAssess(); L.push(""); L.push(sa ? `STENT TIMING (${stentSummary()}) — ${LVL_LABEL[sa.lvl]}: ${sa.t}` : "STENT TIMING: "+STENT_CAUTION); }
+  }
+  if(!hold && ans.modifiers===0 && stentFlag()){ const sa=stentAssess(); L.push(""); L.push(sa ? `STENT TIMING (${stentSummary()}) — ${LVL_LABEL[sa.lvl]}: ${sa.t}` : "STENT TIMING: "+STENT_CAUTION); }
   L.push("");
   L.push("Per 2026 AHA/ACC Guideline for Perioperative Cardiovascular Management for Noncardiac Surgery (J Am Coll Cardiol. 2026;88(13):1543-1643). Decision support — not a substitute for clinical judgment.");
   return L.join("\n");

@@ -2107,7 +2107,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2430,7 +2430,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2617,7 +2617,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2739,7 +2739,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3083,7 +3083,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3539,7 +3539,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3689,7 +3689,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -4030,7 +4030,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4062,7 +4062,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4405,7 +4405,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -5618,7 +5618,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
-  "stent_level": null,
+  "stent_level": "ok",
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",

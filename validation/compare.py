@@ -22,6 +22,9 @@ def content_failures(e, a):
     f = [f"missing '{m}'" for m in e["content"]["must"] if m not in blob]
     f += [f"contains '{m}'" for m in e["content"]["must_not"] if m in blob]
     cor, label = e["content"]["cor"], a.get("label", "")
+    if cor == "any":   # stent hold: shows the §7.5 level and the Figure 1 COR underneath
+        if e.get("stent_level") == "harm" and "cor 3: harm" not in blob: f.append("harm hold lacks 'COR 3: Harm'")
+        return f
     if cor is None and "COR" in label: f.append(f"unsupported COR label '{label}'")
     if cor is not None and f"COR {cor}" not in label: f.append(f"expected COR {cor}, label '{label}'")
     return f
@@ -66,7 +69,8 @@ for pid, e in exp.items():
     frail_ok = a.get("frail_score") == e["frail_score"] and a.get("frail_category") == frail_cat
     if "frail_inflow" in a: frail_ok = frail_ok and a["frail_inflow"] == f"{e['frail_score']} {frail_cat}"
     consistent = all(fr.get(k) == a.get(k) for k in ("outcome", "title", "text", "label", "copied_note", "rcri_score", "dasi_score"))
-    banner_vs_internal = {"ACS_DEFER": "ACUTE_DEFER"}.get(a.get("internal_terminal"), a.get("internal_terminal")) == a["outcome"]
+    banner_vs_internal = {"ACS_DEFER": "ACUTE_DEFER"}.get(a.get("internal_terminal"), a.get("internal_terminal")) == a.get("fig1_outcome", a["outcome"])
+    fig1_ok = None if "fig1_outcome" not in e else a.get("fig1_outcome") == e["fig1_outcome"]
     progress_ok = "of 8" in a.get("progress_label", "of 8")
     # stent-timing flag (only scored when the app exposes the option 3 panel)
     stent_ok = None if "stent_level" not in a or e.get("stent_level") is None else a["stent_level"] == e["stent_level"]
@@ -83,7 +87,7 @@ for pid, e in exp.items():
     for k, v in [("outcome", match), ("content", not cf), ("fc_hint", not hf), ("note", not nf),
                  ("rcri", rcri_ok is not False), ("dasi", dasi_ok is not False), ("dasi_flag", dasi_flag_ok is not False),
                  ("frail", frail_ok), ("reset_vs_fresh", consistent), ("banner_vs_internal", banner_vs_internal), ("progress", progress_ok),
-                 ("stent_level", stent_ok is not False)]:
+                 ("stent_level", stent_ok is not False), ("fig1_under_hold", fig1_ok is not False)]:
         if not v: fails[k] += 1
     rows.append({
         "id": pid, "edge_tags": ";".join(p["edge_tags"]), "procedure": p["surgery"]["procedure"],
@@ -92,6 +96,7 @@ for pid, e in exp.items():
         "oracle_dasi": e["dasi"] if e["fc_branch"] else "", "app_dasi": a.get("dasi_score", ""), "app_dasi_flag": a.get("dasi_flag", ""),
         "oracle_frail": e["frail_score"], "app_frail": f"{a.get('frail_score')} {a.get('frail_category')}",
         "oracle_outcome": e["outcome"], "app_outcome": a["outcome"], "outcome_match": match,
+        "oracle_fig1_under_hold": e.get("fig1_outcome", ""), "app_fig1_under_hold": a.get("fig1_outcome", ""),
         "app_recommendation": a.get("title", ""), "app_label": a.get("label", ""),
         "content_failures": "; ".join(cf), "fc_hint_failures": "; ".join(hf), "note_failures": "; ".join(nf),
         "reset_vs_fresh_consistent": consistent, "discordance_cause": cause,
@@ -109,7 +114,7 @@ print(f"         discordant: {n-m}  (RCRI-definition: {len(defn)}, logic: {len(l
 if n - len(defn):
     print(f"         concordance excluding RCRI-definition cases: {m}/{n-len(defn)} = {100*m/(n-len(defn)):.1f}%")
 print("PER-OUTCOME (oracle): ")
-for o in ["NO_RISK", "EMERGENT", "ACUTE_DEFER", "LOW", "ADEQ", "NO_IMPACT", "BIOMARKER_OK", "BIOMARKER_HIGH"]:
+for o in ["NO_RISK", "EMERGENT", "ACUTE_DEFER", "LOW", "ADEQ", "NO_IMPACT", "BIOMARKER_OK", "BIOMARKER_HIGH", "STENT_HOLD"]:
     rs = [r for r in rows if r["oracle_outcome"] == o]
     print(f"   {o:15s} {sum(r['outcome_match'] for r in rs):3d}/{len(rs)}")
 print("SECONDARY check failures:", dict(fails) if fails else "none")

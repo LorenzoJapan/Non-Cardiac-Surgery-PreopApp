@@ -282,12 +282,16 @@ function runPatient(w, p) {
   w.__copied = null; click(d.getElementById('copyBtn')); rec.copied_note = w.__copied;
   rec.internal_terminal = w.eval('evalFlow().terminal');  // cross-check only; not used for scoring
   rec.outcome = classifyBanner(rec);
+  if (rec.outcome === 'STENT_HOLD') {   // Figure 1 result is shown underneath, "once stent timing allows"
+    rec.fig1_outcome = classifyBanner({ title: txt(d.querySelector('#rnote .fig1t')), text: txt(d.querySelector('#rnote .fig1p')) });
+  }
   return rec;
 }
 
 /* Black-box classification from what the clinician sees */
 function classifyBanner(r) {
   const t = low(r.title), x = low(r.text);
+  if (/stent|confirm antiplatelet plan/.test(t)) return 'STENT_HOLD';
   if (/no cardiovascular risk factors/.test(x)) return 'NO_RISK';
   if (/emergency/.test(x)) return 'EMERGENT';
   if (/hold on surgery/.test(t)) return 'ACUTE_DEFER';

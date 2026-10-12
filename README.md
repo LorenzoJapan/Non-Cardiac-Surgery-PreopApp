@@ -37,9 +37,11 @@ surgical urgency → acute cardiac condition → risk modifiers → RCRI‑gated
 functional capacity → will further testing impact care → biomarkers. When prior stents/CABG are ticked
 at the risk‑modifier step, a stent‑timing panel (guideline §7.5) asks procedure (DES, BMS, balloon only,
 CABG only), DES indication (ACS or stable CAD), time since PCI, and whether surgery requires stopping ≥1
-antiplatelet agent, and shows the matching timing guidance (e.g., DES for ACS: ideally delay elective NCS
+antiplatelet agent (step 4 cannot be completed until these are answered), and shows the matching timing guidance (e.g., DES for ACS: ideally delay elective NCS
 ≥12 months, COR 1; any stent ≤30 days: COR 3: Harm). The stent flag appears in the result and copied
-summary but does not change the Figure 1 recommendation. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; an
+summary. When the stent result is more restrictive (Defer, COR 3: Harm; or Delay), it becomes the headline
+recommendation and the Figure 1 result is shown underneath as applying "once stent timing allows"; if the
+antiplatelet plan is unknown, the headline is "Hold — confirm antiplatelet plan". Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; an
 About tab (scope, limits, privacy, medication timing, comorbidity notes, references); dark mode; larger‑text
 toggle; WCAG‑AA contrast.
 
@@ -51,19 +53,22 @@ clinician; `compare.py` scores the app against the oracle.
 
 | Set | Patients | Source |
 |---|---|---|
-| Original stratified | 200 (P001–P200) | `generate_cohort.py` — every Figure 1 branch plus boundary cases |
+| Original stratified | 200 (P001–P200) | `generate_cohort.py` — every Figure 1 branch plus boundary cases (its 13 prior stent/CABG patients carry structured stent details) |
 | Random | 200 (R001–R200) | `generate_cohort_random.py` — randomly drawn demographics and history (seed 20261012) |
 | Stent‑focused | 40 (S001–S040) | `generate_cohort_stent.py` — random demographics, each assigned a §7.5 scenario at every cut‑off |
 | **Combined** | **440** | `cohort_440.json` |
 
-Current result (combined 440): Figure 1 recommendation concordance 440/440; stent‑timing flag 52/52;
-no secondary check failures (content/COR labels, calculators, chart note, Reset vs fresh page).
+Current result (combined 440): final recommendation concordance 440/440, including 23 stent holds where the
+§7.5 Defer/Delay result overrides a Figure 1 "proceed"; Figure 1 result under each hold 23/23; stent‑timing
+result 63/63; no secondary check failures (content/COR labels, calculators, chart note, Reset vs fresh page).
 
 ```bash
 cd validation
 npm i jsdom
 # original 200 (default file names)
 python3 generate_cohort.py && python3 oracle.py && node run_app.js && python3 compare.py
+# step 4 stent-question gate (UI check)
+node gate_test.js
 # combined 440
 python3 generate_cohort_random.py && python3 generate_cohort_stent.py
 python3 -c "import json;a=sum((json.load(open(f)) for f in ['cohort_200.json','cohort_random_200.json','cohort_stent_40.json']),[]);json.dump(a,open('cohort_440.json','w'),indent=1)"
