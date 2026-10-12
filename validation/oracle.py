@@ -98,6 +98,27 @@ CONTENT = {
 }
 
 
+def stent_level(p, timing_):
+    """§7.5 (recs 2-6, 8, 10) stent-timing flag, for patients with prior PCI/CABG who reach the modifier step.
+    Thresholds: balloon <14 d; any stent <=30 d (3: Harm, elective); BMS >30 d ok; DES for ACS <12 mo (365 d),
+    DES for stable CAD <6 mo (180 d); time-sensitive: DES >=3 mo (90 d) may consider (2b), BMS <=30 d / DES <3 mo
+    continue DAPT (rec 8). Urgent surgery: thresholds address elective/time-sensitive -> team decision ("info")."""
+    s = p["history"].get("pci")
+    if not s: return None
+    if s["type"] == "CABG": return "ok"
+    if timing_ == "urgent": return "info"
+    if s["antiplatelet_interruption"] == "no": return "ok"
+    d, ts = s["days_since"], timing_ == "time-sensitive"
+    if s["type"] == "balloon only": return "delay" if d < 14 else "ok"
+    des = s["type"] == "DES"
+    if ts and (d < 90 if des else d <= 30): return "delay"
+    if d <= 30: return "harm"
+    if not des: return "ok"
+    limit = 365 if s["indication"] == "ACS" else 180
+    if d >= limit: return "ok"
+    return "consider" if ts and d >= 90 else "delay"
+
+
 def evaluate(p):
     r = {"id": p["id"], "timing": timing(p), "frail_score": frail_score(p), "modifiers": risk_modifiers(p),
          "rcri": rcri_table4(p)[0], "rcri_points": rcri_table4(p)[1], "dasi": dasi(p), "fc_branch": None}
@@ -110,6 +131,7 @@ def evaluate(p):
     a = p["acute"]
     if a["acs"] or a["decompensated_hf"] or a["unstable_arrhythmia"]:
         return done("ACUTE_DEFER")                               # Fig 1 acute conditions
+    r["stent_level"] = stent_level(p, r["timing"])
     if not r["modifiers"] and r["rcri"] <= 1:
         return done("LOW")                                       # low calculated risk, no modifiers
     r["fc_branch"] = "modifier" if r["modifiers"] else "no_modifier"
@@ -122,8 +144,10 @@ def evaluate(p):
 
 
 if __name__ == "__main__":
-    cohort = json.load(open("cohort_200.json"))
+    import sys
+    src, dst = (sys.argv[1], sys.argv[2]) if len(sys.argv) > 2 else ("cohort_200.json", "expected_200.json")
+    cohort = json.load(open(src))
     out = [evaluate(p) for p in cohort]
-    json.dump(out, open("expected_200.json", "w"), indent=1)
+    json.dump(out, open(dst, "w"), indent=1)
     from collections import Counter
     print(dict(Counter(o["outcome"] for o in out)))

@@ -1,0 +1,2757 @@
+[
+ {
+  "id": "S001",
+  "age": 79,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": true,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 26.2,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "prior MI",
+   "prior_pci_or_cabg": "DES-PCI 10 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 10,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.4,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Posterior lumbar fusion",
+   "category": "spine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 1081,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S002",
+  "age": 57,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 25.0,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 30 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 30,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.6,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Cataract extraction",
+   "category": "ophthalmologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "sexual_relations"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 89,
+   "troponin_ng_l": 6,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S003",
+  "age": 68,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 29.1,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 31 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": true,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 31,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Simple mastectomy",
+   "category": "breast",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 1329,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S004",
+  "age": 75,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 21.9,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "prior MI",
+   "prior_pci_or_cabg": "DES-PCI 89 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 89,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.4,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Total hip arthroplasty",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "moderate_housework",
+   "heavy_housework",
+   "sexual_relations"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 92,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S005",
+  "age": 40,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": "insulin",
+   "bmi": 33.4,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 90 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 90,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Lumbar laminectomy",
+   "category": "spine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 177,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S006",
+  "age": 61,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 16.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 200 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": true,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 200,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Posterior lumbar fusion",
+   "category": "spine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [],
+  "functional_capacity_assessable": false,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 89,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S007",
+  "age": 61,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 29.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 364 days ago for ACS",
+   "heart_failure": "compensated HFrEF on GDMT",
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": {
+    "lesion": "aortic stenosis",
+    "severity": "mild",
+    "symptomatic": false
+   },
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 364,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 2.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": true,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Cataract extraction",
+   "category": "ophthalmologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "yardwork",
+   "sexual_relations"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 134,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S008",
+  "age": 61,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": true,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 19.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "prior MI",
+   "prior_pci_or_cabg": "DES-PCI 365 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": "paroxysmal AF, rate controlled",
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 365,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.7,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": true
+  },
+  "surgery": {
+   "procedure": "Parathyroidectomy",
+   "category": "endocrine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 75,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S009",
+  "age": 59,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": "oral agents",
+   "bmi": 27.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 45 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": {
+    "lesion": "mitral regurgitation",
+    "severity": "severe",
+    "symptomatic": false
+   },
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 45,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Exploratory laparotomy",
+   "category": "intraperitoneal",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "heavy_housework",
+   "sexual_relations"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 238,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S010",
+  "age": 58,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 22.7,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 179 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 179,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.8,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": true,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Hip fracture repair",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 17,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S011",
+  "age": 67,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 29.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 180 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 180,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.8,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Laparoscopic right hemicolectomy",
+   "category": "intraperitoneal",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "light_housework",
+   "yardwork",
+   "sexual_relations",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 319,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S012",
+  "age": 53,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 33.1,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "stable angina on nitrates",
+   "prior_pci_or_cabg": "DES-PCI 60 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 60,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.7,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": true
+  },
+  "surgery": {
+   "procedure": "Total hip arthroplasty",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 199,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S013",
+  "age": 55,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 37.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 90 days ago for ACS",
+   "heart_failure": "HFrEF, currently volume overloaded",
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 90,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Transurethral resection of prostate",
+   "category": "urologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 463,
+   "troponin_ng_l": 13,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S014",
+  "age": 34,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 22.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "prior MI",
+   "prior_pci_or_cabg": "DES-PCI 300 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 300,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.4,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": true,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Open sigmoid colectomy",
+   "category": "intraperitoneal",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 10,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S015",
+  "age": 89,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 25.9,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 400 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": "paroxysmal AF, rate controlled",
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 400,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.2,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": true,
+   "illnesses_gt_5": true,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Lumbar laminectomy",
+   "category": "spine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 157,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": 30,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S016",
+  "age": 70,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 35.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 89 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 89,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "ORIF distal radius",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 20,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S017",
+  "age": 84,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 25.7,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 120 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 120,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": true,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Lumbar laminectomy",
+   "category": "spine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 307,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S018",
+  "age": 52,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 27.7,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 200 days ago for stable CAD",
+   "heart_failure": "compensated HFpEF, euvolemic",
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 200,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Posterior lumbar fusion",
+   "category": "spine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "climb_stairs_or_hill",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 508,
+   "troponin_ng_l": 6,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S019",
+  "age": 69,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 23.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 20 days ago",
+   "heart_failure": "compensated HFrEF on GDMT",
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 20,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.2,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Open inguinal hernia repair",
+   "category": "extraperitoneal_hernia",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 214,
+   "troponin_ng_l": 8,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S020",
+  "age": 45,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 16.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 30 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 30,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Open AAA repair",
+   "category": "suprainguinal_vascular",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 19,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": 7,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S021",
+  "age": 74,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 25.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 31 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": {
+    "lesion": "mitral regurgitation",
+    "severity": "moderate",
+    "symptomatic": false
+   },
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 31,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.7,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": true,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Total thyroidectomy",
+   "category": "endocrine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 53,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S022",
+  "age": 67,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": "oral agents",
+   "bmi": 16.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 15 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": 1,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 15,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.2,
+  "frail_items": {
+   "fatigue": true,
+   "resistance": true,
+   "ambulation": true,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Cataract extraction",
+   "category": "ophthalmologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "yardwork"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 44,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S023",
+  "age": 75,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 26.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 45 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 45,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.4,
+  "frail_items": {
+   "fatigue": true,
+   "resistance": false,
+   "ambulation": true,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Femoral-tibial bypass",
+   "category": "infrainguinal_vascular",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [],
+  "functional_capacity_assessable": false,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 94,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S024",
+  "age": 64,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": "oral agents",
+   "bmi": 28.9,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "balloon only-PCI 13 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "balloon only",
+    "indication": null,
+    "days_since": 13,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": true,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Transurethral resection of prostate",
+   "category": "urologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 126,
+   "troponin_ng_l": 3,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S025",
+  "age": 85,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": true,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 26.0,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "balloon only-PCI 14 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "balloon only",
+    "indication": null,
+    "days_since": 14,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": true,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Open AAA repair",
+   "category": "suprainguinal_vascular",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 54,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S026",
+  "age": 44,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 27.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "balloon only-PCI 10 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "balloon only",
+    "indication": null,
+    "days_since": 10,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Total hip arthroplasty",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 78,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S027",
+  "age": 60,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": "oral agents",
+   "bmi": 28.4,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 20 days ago for ACS",
+   "heart_failure": "compensated HFpEF, euvolemic",
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 20,
+    "antiplatelet_interruption": "no"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.4,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Cystoscopy with stent",
+   "category": "urologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 209,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S028",
+  "age": 39,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 18.2,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 10 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 10,
+    "antiplatelet_interruption": "no"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.6,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Parathyroidectomy",
+   "category": "endocrine",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "heavy_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 82,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S029",
+  "age": 59,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": "oral agents",
+   "bmi": 24.9,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [
+   "exertional chest pressure"
+  ],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 100 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 100,
+    "antiplatelet_interruption": "unknown"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.3,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Pancreaticoduodenectomy (Whipple)",
+   "category": "intraperitoneal",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "moderate_recreation",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 700,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S030",
+  "age": 57,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 38.2,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 25 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 25,
+    "antiplatelet_interruption": "unknown"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.1,
+  "frail_items": {
+   "fatigue": true,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Hip fracture repair",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 162,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S031",
+  "age": 49,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 26.1,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 200 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 200,
+    "antiplatelet_interruption": "unknown"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.9,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "ORIF distal radius",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "moderate_recreation"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 12,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": 3,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S032",
+  "age": 62,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": "oral agents",
+   "bmi": 31.0,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 400 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 400,
+    "antiplatelet_interruption": "unknown"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.8,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": true,
+   "ambulation": true,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Hip fracture repair",
+   "category": "orthopedic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "moderate_recreation",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 48,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": 6,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S033",
+  "age": 55,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 32.3,
+   "family_history_premature_cad": true
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "balloon only-PCI 5 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "balloon only",
+    "indication": null,
+    "days_since": 5,
+    "antiplatelet_interruption": "unknown"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.4,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Open AAA repair",
+   "category": "suprainguinal_vascular",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "sexual_relations",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 29,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S034",
+  "age": 57,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": true,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 29.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 20 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 20,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": true,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Total knee arthroplasty",
+   "category": "orthopedic",
+   "time_to_surgery_hours": 12,
+   "can_be_delayed": "n/a"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 37,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S035",
+  "age": 77,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 16.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "BMS-PCI 300 days ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "BMS",
+    "indication": null,
+    "days_since": 300,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": true,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Open sigmoid colectomy",
+   "category": "intraperitoneal",
+   "time_to_surgery_hours": 20,
+   "can_be_delayed": "n/a"
+  },
+  "dasi_activities_can_do": [
+   "heavy_housework"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 175,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S036",
+  "age": 67,
+  "sex": "F",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 23.5,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "CABG 5 years ago",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.7,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Aortobifemoral bypass",
+   "category": "suprainguinal_vascular",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_recreation",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 166,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S037",
+  "age": 51,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 39.2,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "CABG 6 years ago",
+   "heart_failure": "compensated HFrEF on GDMT",
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "CABG",
+    "indication": null,
+    "days_since": null,
+    "antiplatelet_interruption": null
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Cataract extraction",
+   "category": "ophthalmologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "up to 3 months"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "climb_stairs_or_hill",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "sexual_relations",
+   "moderate_recreation",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 63,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S038",
+  "age": 53,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": true,
+   "hyperlipidemia": false,
+   "diabetes": "diet-controlled",
+   "bmi": 29.0,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 20 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 20,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 0.8,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Posterior lumbar fusion",
+   "category": "spine",
+   "time_to_surgery_hours": 0.5,
+   "can_be_delayed": "n/a"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "moderate_housework",
+   "heavy_housework",
+   "yardwork",
+   "strenuous_sports"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": true,
+  "biomarkers": {
+   "bnp_ng_l": 18,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S039",
+  "age": 74,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": true,
+   "smoking": false,
+   "hyperlipidemia": true,
+   "diabetes": null,
+   "bmi": 21.9,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "CAD s/p revascularization",
+   "prior_pci_or_cabg": "DES-PCI 60 days ago for stable CAD",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": null,
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "stable CAD",
+    "days_since": 60,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": null,
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.0,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Total thyroidectomy",
+   "category": "endocrine",
+   "time_to_surgery_hours": 1,
+   "can_be_delayed": "n/a"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "climb_stairs_or_hill",
+   "light_housework",
+   "sexual_relations"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": 57,
+   "nt_probnp_ng_l": null,
+   "troponin_ng_l": 11,
+   "troponin_url_ng_l": 14
+  },
+  "edge_tags": []
+ },
+ {
+  "id": "S040",
+  "age": 51,
+  "sex": "M",
+  "risk_factors": {
+   "hypertension": false,
+   "smoking": false,
+   "hyperlipidemia": false,
+   "diabetes": null,
+   "bmi": 36.6,
+   "family_history_premature_cad": false
+  },
+  "cv_symptoms": [],
+  "history": {
+   "ischemic_heart_disease": "prior MI",
+   "prior_pci_or_cabg": "DES-PCI 40 days ago for ACS",
+   "heart_failure": null,
+   "stroke_or_tia_months_ago": null,
+   "cied": null,
+   "valve_disease": {
+    "lesion": "mitral regurgitation",
+    "severity": "severe",
+    "symptomatic": true
+   },
+   "pulmonary_hypertension": null,
+   "congenital_heart_disease": null,
+   "atrial_fibrillation": null,
+   "peripheral_artery_disease": false,
+   "pci": {
+    "type": "DES",
+    "indication": "ACS",
+    "days_since": 40,
+    "antiplatelet_interruption": "yes"
+   }
+  },
+  "acute": {
+   "acs": "NSTEMI 5 days ago",
+   "decompensated_hf": false,
+   "unstable_arrhythmia": null
+  },
+  "creatinine_mg_dl": 1.3,
+  "frail_items": {
+   "fatigue": false,
+   "resistance": false,
+   "ambulation": false,
+   "illnesses_gt_5": false,
+   "weight_loss_ge_5pct": false
+  },
+  "surgery": {
+   "procedure": "Cystoscopy with stent",
+   "category": "urologic",
+   "time_to_surgery_hours": null,
+   "can_be_delayed": "indefinitely"
+  },
+  "dasi_activities_can_do": [
+   "self_care",
+   "walk_indoors",
+   "walk_1_2_blocks",
+   "run_short_distance",
+   "light_housework",
+   "moderate_housework",
+   "yardwork",
+   "sexual_relations"
+  ],
+  "functional_capacity_assessable": true,
+  "further_testing_would_change_management": false,
+  "biomarkers": {
+   "bnp_ng_l": null,
+   "nt_probnp_ng_l": 116,
+   "troponin_ng_l": null,
+   "troponin_url_ng_l": null
+  },
+  "edge_tags": []
+ }
+]

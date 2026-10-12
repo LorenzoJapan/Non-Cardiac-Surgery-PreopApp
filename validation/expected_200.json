@@ -1276,6 +1276,7 @@
   },
   "dasi": 18.95,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1301,6 +1302,7 @@
   },
   "dasi": 28.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1326,6 +1328,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1351,6 +1354,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1376,6 +1380,7 @@
   },
   "dasi": 34.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1401,6 +1406,7 @@
   },
   "dasi": 28.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1426,6 +1432,7 @@
   },
   "dasi": 42.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1451,6 +1458,7 @@
   },
   "dasi": 13.45,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1476,6 +1484,7 @@
   },
   "dasi": 9.95,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1501,6 +1510,7 @@
   },
   "dasi": 13.45,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1526,6 +1536,7 @@
   },
   "dasi": 28.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1551,6 +1562,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1576,6 +1588,7 @@
   },
   "dasi": 13.45,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1601,6 +1614,7 @@
   },
   "dasi": 18.95,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1626,6 +1640,7 @@
   },
   "dasi": 34.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1651,6 +1666,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1676,6 +1692,7 @@
   },
   "dasi": 0,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1701,6 +1718,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1726,6 +1744,7 @@
   },
   "dasi": 34.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1751,6 +1770,7 @@
   },
   "dasi": 13.45,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1776,6 +1796,7 @@
   },
   "dasi": 42.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1801,6 +1822,7 @@
   },
   "dasi": 18.95,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1826,6 +1848,7 @@
   },
   "dasi": 4.5,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -1851,6 +1874,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -1880,6 +1904,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -1907,6 +1932,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -1936,6 +1962,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -1965,6 +1992,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -1992,6 +2020,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2019,6 +2048,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2046,6 +2076,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2076,6 +2107,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2105,6 +2137,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2132,6 +2165,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2162,6 +2196,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2192,6 +2227,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2219,6 +2255,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2246,6 +2283,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2273,6 +2311,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2300,6 +2339,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2329,6 +2369,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2358,6 +2399,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2388,6 +2430,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2418,6 +2461,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -2448,6 +2492,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2479,6 +2524,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2508,6 +2554,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2537,6 +2584,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2569,6 +2617,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2598,6 +2647,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2627,6 +2677,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2656,6 +2707,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2687,6 +2739,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2716,6 +2769,7 @@
   },
   "dasi": 18.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2745,6 +2799,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2776,6 +2831,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2808,6 +2864,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2840,6 +2897,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2871,6 +2929,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2900,6 +2959,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2931,6 +2991,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2960,6 +3021,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -2989,6 +3051,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3020,6 +3083,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3049,6 +3113,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -3078,6 +3143,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3106,6 +3172,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3134,6 +3201,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3164,6 +3232,7 @@
   },
   "dasi": 18.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3192,6 +3261,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3220,6 +3290,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3250,6 +3321,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3281,6 +3353,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3311,6 +3384,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3342,6 +3416,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3370,6 +3445,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3400,6 +3476,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3430,6 +3507,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3461,6 +3539,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3492,6 +3571,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3520,6 +3600,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3548,6 +3629,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3576,6 +3658,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3606,6 +3689,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3636,6 +3720,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -3664,6 +3749,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3693,6 +3779,7 @@
   },
   "dasi": 18.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3722,6 +3809,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3753,6 +3841,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3785,6 +3874,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3816,6 +3906,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3847,6 +3938,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3876,6 +3968,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3905,6 +3998,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3936,6 +4030,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3967,6 +4062,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -3996,6 +4092,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4025,6 +4122,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4057,6 +4155,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4088,6 +4187,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4117,6 +4217,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4148,6 +4249,7 @@
   },
   "dasi": 0,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4180,6 +4282,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4209,6 +4312,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4238,6 +4342,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4267,6 +4372,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4299,6 +4405,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4328,6 +4435,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4357,6 +4465,7 @@
   },
   "dasi": 18.95,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4436,6 +4545,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4461,6 +4571,7 @@
   },
   "dasi": 42.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4511,6 +4622,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4536,6 +4648,7 @@
   },
   "dasi": 34.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4588,6 +4701,7 @@
   },
   "dasi": 42.7,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4668,6 +4782,7 @@
   },
   "dasi": 18.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -4699,6 +4814,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -4728,6 +4844,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -4755,6 +4872,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4782,6 +4900,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -4811,6 +4930,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -4836,6 +4956,7 @@
   },
   "dasi": 34.0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -4865,6 +4986,7 @@
   },
   "dasi": 34.0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -4894,6 +5016,7 @@
   },
   "dasi": 34.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -4921,6 +5044,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -4949,6 +5073,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -4977,6 +5102,7 @@
   },
   "dasi": 13.45,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -5006,6 +5132,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -5034,6 +5161,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -5063,6 +5191,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_OK",
   "content": {
    "cor": "2a",
@@ -5091,6 +5220,7 @@
   },
   "dasi": 0,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -5120,6 +5250,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5147,6 +5278,7 @@
   },
   "dasi": 28.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "BIOMARKER_HIGH",
   "content": {
    "cor": "2b",
@@ -5176,6 +5308,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5203,6 +5336,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5230,6 +5364,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5257,6 +5392,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -5282,6 +5418,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5309,6 +5446,7 @@
   },
   "dasi": 13.45,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -5334,6 +5472,7 @@
   },
   "dasi": 18.95,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -5361,6 +5500,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5388,6 +5528,7 @@
   },
   "dasi": 58.2,
   "fc_branch": null,
+  "stent_level": null,
   "outcome": "LOW",
   "content": {
    "cor": null,
@@ -5415,6 +5556,7 @@
   },
   "dasi": 9.95,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -5446,6 +5588,7 @@
   },
   "dasi": 58.2,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5475,6 +5618,7 @@
   },
   "dasi": 34.7,
   "fc_branch": "modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",
@@ -5502,6 +5646,7 @@
   },
   "dasi": 4.5,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "NO_IMPACT",
   "content": {
    "cor": null,
@@ -5531,6 +5676,7 @@
   },
   "dasi": 42.7,
   "fc_branch": "no_modifier",
+  "stent_level": null,
   "outcome": "ADEQ",
   "content": {
    "cor": "2a",

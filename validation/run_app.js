@@ -15,7 +15,7 @@ const { JSDOM } = require('jsdom');
 
 const HTML = fs.readFileSync(process.env.APP_HTML || path.join(__dirname, '..', 'index.html'), 'utf8');
 const OUT = process.env.OUT_JSON || path.join(__dirname, 'app_results_200.json');
-const cohort = JSON.parse(fs.readFileSync(path.join(__dirname, 'cohort_200.json'), 'utf8'));
+const cohort = JSON.parse(fs.readFileSync(process.env.COHORT_JSON || path.join(__dirname, 'cohort_200.json'), 'utf8'));
 
 function makePage() {
   const dom = new JSDOM(HTML, {
@@ -166,6 +166,38 @@ function biomarkerAnswer(w, p) {
   return abn ? 'Elevated' : 'Normal';
 }
 
+/* Option 3 stent panel (only present in the preview build): answered from the panel's own labels */
+function stentChipMatch(q, chip, s) {
+  if (/procedure/.test(q)) return { DES: 'des', BMS: 'bms', 'balloon only': 'balloon only', CABG: 'cabg only' }[s.type] === chip;
+  if (/placed for/.test(q)) return (s.indication || '').toLowerCase() === chip;
+  if (/stopping/.test(q)) return s.antiplatelet_interruption === chip;
+  if (/time since/.test(q)) {               // e.g. "< 14 d", "14–30 d", "31 d – < 3 mo", "3 – < 6 mo", "≥ 12 mo"
+    const days = (n, u) => (u === 'mo' ? (+n === 12 ? 365 : +n * 30) : +n);
+    const nums = [...chip.matchAll(/(\d+)\s*(d|mo)?/g)].map((m) => [m[1], m[2]]);
+    const unit = (nums[nums.length - 1] || [])[1] || 'd';
+    const v = nums.map(([n, u]) => days(n, u || unit)), d = s.days_since;
+    if (/^</.test(chip)) return d < v[0];
+    if (/^≥/.test(chip)) return d >= v[0];
+    return /<\s*\d/.test(chip) ? d >= v[0] && d < v[1] : d >= v[0] && d <= v[1];
+  }
+  return false;
+}
+function answerStentPanel(w, p, rec) {
+  const s = p.history.pci, panel = () => w.document.getElementById('stentQ');
+  if (!panel() || panel().style.display === 'none' || !s) return;
+  for (let guard = 0; guard < 6; guard++) {            // panel re-renders after each answer; questions appear in turn
+    const q = [...panel().querySelectorAll('.sq')].find((x) => !x.querySelector('.schip.on'));
+    if (!q) break;
+    const ql = low(txt(q.querySelector('.sql')));
+    const chip = [...q.querySelectorAll('.schip')].find((c) => stentChipMatch(ql, low(txt(c)), s));
+    if (!chip) throw new Error(`no stent chip for "${ql}"`);
+    click(chip);
+  }
+  const f = panel().querySelector('.stentflag');
+  rec.stent_level = ['harm', 'delay', 'consider', 'ok', 'info'].find((c) => f.classList.contains(c)) || 'pending';
+  rec.stent_text = txt(f);
+}
+
 /* ---------- sheet (calculator) helpers ---------- */
 function tickSheet(w, matcher) {  // set each item to its desired state (calculators remember prior ticks)
   const items = [...w.document.querySelectorAll('#sheet-list .chk')];
@@ -218,6 +250,7 @@ function runPatient(w, p) {
         if (frailBtn && /frail/i.test(l)) { if (q.classList.contains('on')) picked.push(l); return; }  // set by the app
         if (modifierMatches(l, p, ctx)) { picked.push(l); click(q); }
       });
+      answerStentPanel(w, p, rec);
       rec.answers.modifiers = picked; click(cur.querySelector('.qcontinue'));
     } else if (/Risk of MACE/.test(title)) {
       if (!sheetOpen(w)) click(row.querySelector('.rmini'));

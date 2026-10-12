@@ -6,12 +6,12 @@ RCRI / DASI / FRAIL calculator agreement, copied chart note, Reset-vs-fresh cons
 
 Usage:  python3 compare.py   ->  results_200.csv (+ printed summary)
 """
-import csv, json
+import csv, json, os
 from collections import Counter
 
-cohort = {p["id"]: p for p in json.load(open("cohort_200.json"))}
-exp = {e["id"]: e for e in json.load(open("expected_200.json"))}
-runs = json.load(open("app_results_200.json"))
+cohort = {p["id"]: p for p in json.load(open(os.environ.get("COHORT_JSON", "cohort_200.json")))}
+exp = {e["id"]: e for e in json.load(open(os.environ.get("EXPECTED_JSON", "expected_200.json")))}
+runs = json.load(open(os.environ.get("APP_JSON", "app_results_200.json")))
 app = {r["id"]: r for r in runs["reset"]}
 fresh = {r["id"]: r for r in runs["fresh"]}
 URG = {"emergency": "Emergency", "urgent": "Urgent", "time-sensitive": "Time-sens", "elective": "Elective"}
@@ -68,6 +68,8 @@ for pid, e in exp.items():
     consistent = all(fr.get(k) == a.get(k) for k in ("outcome", "title", "text", "label", "copied_note", "rcri_score", "dasi_score"))
     banner_vs_internal = {"ACS_DEFER": "ACUTE_DEFER"}.get(a.get("internal_terminal"), a.get("internal_terminal")) == a["outcome"]
     progress_ok = "of 8" in a.get("progress_label", "of 8")
+    # stent-timing flag (only scored when the app exposes the option 3 panel)
+    stent_ok = None if "stent_level" not in a or e.get("stent_level") is None else a["stent_level"] == e["stent_level"]
     cause = ""
     if not match:
         pts = e["rcri_points"]
@@ -80,7 +82,8 @@ for pid, e in exp.items():
             cause = "LOGIC"
     for k, v in [("outcome", match), ("content", not cf), ("fc_hint", not hf), ("note", not nf),
                  ("rcri", rcri_ok is not False), ("dasi", dasi_ok is not False), ("dasi_flag", dasi_flag_ok is not False),
-                 ("frail", frail_ok), ("reset_vs_fresh", consistent), ("banner_vs_internal", banner_vs_internal), ("progress", progress_ok)]:
+                 ("frail", frail_ok), ("reset_vs_fresh", consistent), ("banner_vs_internal", banner_vs_internal), ("progress", progress_ok),
+                 ("stent_level", stent_ok is not False)]:
         if not v: fails[k] += 1
     rows.append({
         "id": pid, "edge_tags": ";".join(p["edge_tags"]), "procedure": p["surgery"]["procedure"],
@@ -92,9 +95,10 @@ for pid, e in exp.items():
         "app_recommendation": a.get("title", ""), "app_label": a.get("label", ""),
         "content_failures": "; ".join(cf), "fc_hint_failures": "; ".join(hf), "note_failures": "; ".join(nf),
         "reset_vs_fresh_consistent": consistent, "discordance_cause": cause,
+        "oracle_stent_level": e.get("stent_level") or "", "app_stent_level": a.get("stent_level", ""),
     })
 
-with open("results_200.csv", "w", newline="") as fh:
+with open(os.environ.get("OUT_CSV", "results_200.csv"), "w", newline="") as fh:
     w = csv.DictWriter(fh, fieldnames=list(rows[0])); w.writeheader(); w.writerows(rows)
 
 n = len(rows); m = sum(r["outcome_match"] for r in rows)

@@ -34,9 +34,43 @@ app publicly accessible; the in‑app disclaimer applies.*
 
 Eight‑step assessment matching guideline Figure 1: cardiovascular risk factors/disease/symptoms →
 surgical urgency → acute cardiac condition → risk modifiers → RCRI‑gated MACE risk → DASI‑gated
-functional capacity → will further testing impact care → biomarkers. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; an
+functional capacity → will further testing impact care → biomarkers. When prior stents/CABG are ticked
+at the risk‑modifier step, a stent‑timing panel (guideline §7.5) asks procedure (DES, BMS, balloon only,
+CABG only), DES indication (ACS or stable CAD), time since PCI, and whether surgery requires stopping ≥1
+antiplatelet agent, and shows the matching timing guidance (e.g., DES for ACS: ideally delay elective NCS
+≥12 months, COR 1; any stent ≤30 days: COR 3: Harm). The stent flag appears in the result and copied
+summary but does not change the Figure 1 recommendation. Built‑in RCRI, DASI, and FRAIL calculators; a one‑tap chart‑ready summary; an
 About tab (scope, limits, privacy, medication timing, comorbidity notes, references); dark mode; larger‑text
 toggle; WCAG‑AA contrast.
+
+## Validation
+
+The `validation/` folder holds a black‑box test suite. `oracle.py` encodes Figure 1 and the §7.5 stent rules
+from the guideline text (not from the app's code); `run_app.js` drives `index.html` through its UI like a
+clinician; `compare.py` scores the app against the oracle.
+
+| Set | Patients | Source |
+|---|---|---|
+| Original stratified | 200 (P001–P200) | `generate_cohort.py` — every Figure 1 branch plus boundary cases |
+| Random | 200 (R001–R200) | `generate_cohort_random.py` — randomly drawn demographics and history (seed 20261012) |
+| Stent‑focused | 40 (S001–S040) | `generate_cohort_stent.py` — random demographics, each assigned a §7.5 scenario at every cut‑off |
+| **Combined** | **440** | `cohort_440.json` |
+
+Current result (combined 440): Figure 1 recommendation concordance 440/440; stent‑timing flag 52/52;
+no secondary check failures (content/COR labels, calculators, chart note, Reset vs fresh page).
+
+```bash
+cd validation
+npm i jsdom
+# original 200 (default file names)
+python3 generate_cohort.py && python3 oracle.py && node run_app.js && python3 compare.py
+# combined 440
+python3 generate_cohort_random.py && python3 generate_cohort_stent.py
+python3 -c "import json;a=sum((json.load(open(f)) for f in ['cohort_200.json','cohort_random_200.json','cohort_stent_40.json']),[]);json.dump(a,open('cohort_440.json','w'),indent=1)"
+python3 oracle.py cohort_440.json expected_440.json
+COHORT_JSON=$PWD/cohort_440.json OUT_JSON=$PWD/app_results_440.json node run_app.js
+COHORT_JSON=cohort_440.json EXPECTED_JSON=expected_440.json APP_JSON=app_results_440.json OUT_CSV=results_440.csv python3 compare.py
+```
 
 ## Source
 
