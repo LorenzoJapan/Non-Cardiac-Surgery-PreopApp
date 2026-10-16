@@ -118,8 +118,12 @@
   .row.active{animation:qfade .32s ease}
   @keyframes qfade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
   .rhint{font-size:12px;color:var(--muted);margin:1px 0 8px 32px;line-height:1.35}
-  .summaries{display:flex;flex-direction:column;gap:9px;flex:none}
-  .activewrap{flex:1;display:flex;flex-direction:column;justify-content:center;justify-content:safe center;min-height:0;margin-top:9px;overflow-y:auto}
+  /* answered steps give up space first (and scroll) so the active question's buttons stay on screen */
+  .summaries{display:flex;flex-direction:column;gap:9px;flex:0 1000 auto;min-height:44px;overflow-y:auto}
+  .summaries:empty{min-height:0}
+  .summaries::-webkit-scrollbar{display:none}
+  .summaries .summary{flex:none}
+  .activewrap{flex:1 1 auto;display:flex;flex-direction:column;justify-content:center;justify-content:safe center;min-height:0;margin-top:9px;overflow-y:auto}
   .activewrap::-webkit-scrollbar{display:none}
   .activewrap:empty{margin-top:0}
   .progress{display:none;align-items:center;gap:6px;margin:-4px 0 12px;padding:0 2px}
@@ -639,6 +643,7 @@ function renderRows(){
     }
   });
   document.getElementById('rows').innerHTML=`<div class="summaries">${sumHtml}</div><div class="activewrap">${actHtml}</div>`;
+  const sm=document.querySelector('#rows .summaries'); sm.scrollTop=sm.scrollHeight;   // keep the most recent answer in view
   renderResult(terminal); renderProgress(activeIdx,terminal);
 }
 function editStep(key){
