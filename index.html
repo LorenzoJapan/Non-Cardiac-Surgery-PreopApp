@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <!-- Privacy safeguard: the browser blocks all network requests, external scripts/styles/fonts, forms and
-     plug-ins. Only this file's own inline code and data: icons may run, so no entered answer can leave the device. -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'">
+     plug-ins. Only this file's own inline code, data: icons and the data: install manifest may run, so no entered answer can leave the device. -->
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; connect-src 'none'; form-action 'none'; base-uri 'none'; object-src 'none'; manifest-src data:">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
 <title>Preop Clearance</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
@@ -916,10 +916,32 @@ function fitPhone(){
   const s=Math.min(1,(window.innerHeight-24)/874,(window.innerWidth-24)/402);
   document.querySelector('.phone').style.transform='scale('+s+')';
 }
-if(window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true){
+// Full-screen layout when launched from the Home Screen, or when opened in a browser tab on a phone
+// (touch screen, shorter side ≤ 500 CSS px). Desktops and tablets keep the simulated iPhone frame.
+const onPhone = window.matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) <= 500;
+if(window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone===true || onPhone){
   document.body.classList.add('standalone');
 }
 window.addEventListener('resize',fitPhone); fitPhone();
+
+// Install manifest, built in-page so the app stays a single file: lets Android Chrome install it
+// and launch it full screen from the Home Screen (iPhone uses the apple-mobile-web-app tags above).
+(function(){
+  if(!document.createElement('canvas').getContext('2d')) return;
+  function icon(px){
+    const c=document.createElement('canvas'); c.width=c.height=px; const g=c.getContext('2d');
+    g.fillStyle='#16323C'; g.fillRect(0,0,px,px);
+    g.fillStyle='#2FB6AE'; g.font='700 '+Math.round(px*0.58)+'px -apple-system,Helvetica,Arial,sans-serif';
+    g.textAlign='center'; g.textBaseline='middle'; g.fillText('Pc',px/2,px/2);
+    return {src:c.toDataURL('image/png'),sizes:px+'x'+px,type:'image/png',purpose:'any maskable'};
+  }
+  const start=location.href.split('#')[0].split('?')[0];
+  const m={name:'Preop Clearance',short_name:'Preop Clearance',start_url:start,scope:start.replace(/[^/]*$/,''),
+    display:'standalone',background_color:'#16323C',theme_color:'#16323C',icons:[icon(192),icon(512)]};
+  const l=document.createElement('link'); l.rel='manifest';
+  l.href='data:application/manifest+json,'+encodeURIComponent(JSON.stringify(m));
+  document.head.appendChild(l);
+})();
 </script>
 </body>
 </html>
